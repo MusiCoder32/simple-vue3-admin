@@ -1,0 +1,57 @@
+{
+    "items": [
+        {
+            "component": "Button",
+            "props": {
+                "name": "新增",
+                "type": "primary",
+                "category": 1,
+                "clickEvent": "custom",
+                "customEvent": "{{ addUser }}"
+            },
+            "designKey": "form-3shp",
+            "name": "SbWDn8"
+        },
+        {
+            "label": "人员信息",
+            "component": "FormList",
+            "showChange": false,
+            "children": [
+                {
+                    "label": "姓名",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-j7jd",
+                    "name": "username"
+                },
+                {
+                    "label": "角色",
+                    "component": "Select",
+                    "props": {
+                        "mode": "static",
+                        "options": [],
+                        "placeholder": "请选择",
+                        "labelKey": "label",
+                        "valueKey": "value",
+                        "on": [
+                            {
+                                "expand": true,
+                                "eventName": "{{ $item? ()=>openRoleLayer($index) : null }}",
+                                "eventType": "click"
+                            }
+                        ],
+                        "multiple": true
+                    },
+                    "designKey": "form-WHcd",
+                    "name": "role"
+                }
+            ],
+            "props": { "mode": "table", "maxLines": 999, "allowAdd": false },
+            "designKey": "form-S60F",
+            "name": "users"
+        }
+    ],
+    "labelWidth": "120px",
+    "labelAlign": "left",
+    "size": "default"
+}

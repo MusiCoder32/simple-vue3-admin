@@ -1,0 +1,130 @@
+{
+    "labelWidth": "130px",
+    "labelAlign": "top",
+    "labelSuffix": "",
+    "size": "default",
+    "items": [
+        {
+            "label": "attachments.fileUpload",
+            "component": "Upload",
+            "props": {
+                "uploadKey": "fileArr",
+                "action": "https://hyl999.co/api/upload/image",
+                "size": 1024,
+                "buttonText": "attachments.clickUpload",
+                "limit": 999,
+                "showFileList": true,
+                "on": [{ "eventType": "uploadSuccess", "eventName": "uploadSuccess" }],
+                "class": ""
+            },
+            "designKey": "form-mQgg",
+            "name": "iU8FSD",
+            "hideLabel": true,
+            "hidden": "{{ $formStatus==='view'}}"
+        },
+        {
+            "label": "自增容器",
+            "component": "FormList",
+            "children": [
+                {
+                    "label": "attachments.projectStep",
+                    "component": "Input",
+                    "props": {
+                        "placeholder": "",
+                        "disabled": false,
+                        "class": "form-readonly ",
+                        "on": [{ "expand": true }],
+                        "readonly": true
+                    },
+                    "designKey": "form-mz1V",
+                    "name": "flowBlockName",
+                    "initialValue": "",
+                    "help": "",
+                    "change": [{ "expand": true }],
+                    "rules": [{ "expand": true }],
+                    "class": "form-readonly"
+                },
+                {
+                    "label": "attachments.fileName",
+                    "component": "Input",
+                    "props": {
+                        "placeholder": "",
+                        "disabled": false,
+                        "class": "form-readonly ",
+                        "on": [{ "expand": true }],
+                        "readonly": true,
+                        "ellipsis": true
+                    },
+                    "designKey": "form-0KOU",
+                    "name": "fileName",
+                    "change": [{ "expand": true }],
+                    "rules": [{ "expand": true }],
+                    "class": "form-readonly"
+                },
+                {
+                    "label": "attachments.uploader",
+                    "component": "Input",
+                    "props": {
+                        "placeholder": "",
+                        "disabled": false,
+                        "class": "form-readonly ",
+                        "on": [{ "expand": true }],
+                        "readonly": true
+                    },
+                    "designKey": "form-DTGv",
+                    "name": "creatorName",
+                    "initialValue": "{{ $values.creatorName }}",
+                    "change": [{ "expand": true }],
+                    "rules": [{ "expand": true }],
+                    "class": "form-readonly"
+                },
+                {
+                    "label": "attachments.uploadTime",
+                    "component": "DatePicker",
+                    "props": {
+                        "type": "datetime",
+                        "placeholder": "",
+                        "clearable": false,
+                        "readonly": true,
+                        "disabled": false,
+                        "class": "form-readonly ",
+                        "on": [{ "expand": true }],
+                        "startOrEnd": 2
+                    },
+                    "designKey": "form-XM6i",
+                    "name": "gmtCreate",
+                    "initialValue": "",
+                    "change": [{ "expand": true }],
+                    "class": "form-readonly",
+                    "width": "160px"
+                }
+            ],
+            "props": {
+                "mode": "table",
+                "showIndex": true,
+                "fileRangeType": "{{$formStatus==='upload'}}",
+                "content": "",
+                "operations": [
+                    {
+                        "buttonName": "common.delete",
+                        "buttonEvent": "fileDel",
+                        "expand": true,
+                        "hidden": "{{$formStatus==='view'}}"
+                    },
+                    { "expand": true, "buttonName": "common.view", "buttonEvent": "fileView" }
+                ],
+                "showChange": false,
+                "allowAdd": false,
+                "showPage": true,
+                "operationWidth": "120px",
+                "class": ""
+            },
+            "designKey": "form-UXZ9",
+            "name": "fileArr",
+            "hideLabel": true,
+            "showChange": false
+        }
+    ],
+    "name": "",
+    "hideRequiredAsterisk": false
+}

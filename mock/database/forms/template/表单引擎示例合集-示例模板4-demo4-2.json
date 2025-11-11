@@ -1,0 +1,92 @@
+{
+    "items": [
+        {
+            "component": "Grid",
+            "children": [
+                {
+                    "label": "姓名",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-d1TW",
+                    "name": "name"
+                },
+                {
+                    "label": "年龄",
+                    "component": "InputNumber",
+                    "designKey": "form-3gyJ",
+                    "name": "age",
+                    "props": { "step": 1, "precision": 0 }
+                },
+                {
+                    "label": "婚姻情况",
+                    "component": "Radio",
+                    "props": {
+                        "mode": "static",
+                        "options": [
+                            { "label": "已婚", "value": "0" },
+                            { "label": "未婚", "value": "1" }
+                        ],
+                        "labelKey": "label",
+                        "valueKey": "value",
+                        "optionType": "circle",
+                        "direction": "horizontal",
+                        "space": 20,
+                        "disabled": "{{ $values.age < 20 }}"
+                    },
+                    "designKey": "form-1DkH",
+                    "name": "marry"
+                },
+                {
+                    "label": "爱好",
+                    "component": "Select",
+                    "props": {
+                        "mode": "local",
+                        "placeholder": "请选择",
+                        "labelKey": "label",
+                        "valueKey": "value",
+                        "localOptions": "{{ hobbyOptions }}"
+                    },
+                    "designKey": "form-HMue",
+                    "name": "like",
+                    "hideLabel": false
+                }
+            ],
+            "props": { "columns": 2, "column-gap": 100, "row-gap": 20, "class": "mb4" },
+            "designKey": "form-huLG",
+            "name": "evyn6D"
+        },
+        {
+            "label": "曾用名",
+            "component": "FormList",
+            "showChange": false,
+            "children": [
+                {
+                    "label": "名字",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-Dgb0",
+                    "name": "oldName",
+                    "labelAlign": "top"
+                },
+                {
+                    "label": "名字长度",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-34KW",
+                    "name": "length",
+                    "labelAlign": "top"
+                }
+            ],
+            "props": { "mode": "table", "maxLines": 999, "class": "readonly", "allowAdd": false, "needFirst": false },
+            "designKey": "form-Iv4E",
+            "name": "oldNames",
+            "hideLabel": false,
+            "hidden": false,
+            "labelAlign": "top"
+        }
+    ],
+    "labelWidth": "90px",
+    "labelSuffix": "",
+    "labelAlign": "top",
+    "size": "default"
+}

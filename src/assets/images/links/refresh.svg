@@ -1,0 +1,16 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="currentColor"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+	<defs>
+		<clipPath id="clip3751_48636">
+			<rect id="还原" width="24.000000" height="24.000000"
+				transform="matrix(-1 0 0 1 24 0)" fill="white" fill-opacity="0" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip3751_48636)">
+		<path id="path"
+			d="M9.5 10C9.83 10 10 9.83 10 9.5L10 8.5C10 8.16 9.83 8 9.5 8L6.25 8C7.51 6.18 9.62 5 12 5C15.86 5 19 8.13 19 12C19 15.86 15.86 19 12 19C8.82 19 6.15 16.89 5.29 14L3.22 14C4.13 18 7.71 21 12 21C16.97 21 21 16.97 21 12C21 7.02 16.97 3 12 3C9.17 3 6.64 4.3 4.99 6.34L5 3.5C5 3.16 4.83 3 4.5 3L3.5 3C3.16 3 3 3.16 3 3.5L3 9C3 9.26 3.08 9.48 3.26 9.67C3.44 9.87 3.66 9.97 3.92 9.99L4 10L9.5 10Z"
+			 fill-opacity="1.000000" fill-rule="evenodd" />
+	</g>
+</svg>

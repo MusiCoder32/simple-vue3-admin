@@ -1,0 +1,82 @@
+{
+    "items": [
+        {
+            "label": "姓名",
+            "component": "Input",
+            "props": { "placeholder": "请输入文本" },
+            "designKey": "form-d1TW",
+            "name": "name"
+        },
+        {
+            "label": "年龄",
+            "component": "InputNumber",
+            "designKey": "form-3gyJ",
+            "name": "age",
+            "props": { "step": 1, "precision": 0 },
+            "hideLabel": false
+        },
+        {
+            "label": "爱好",
+            "component": "Select",
+            "props": {
+                "mode": "static",
+                "options": [
+                    { "label": "乒乓", "value": "乒乓" },
+                    { "label": "蓝球", "value": "蓝球" },
+                    { "label": "羽毛球", "value": "羽毛球" }
+                ],
+                "placeholder": "请选择",
+                "labelKey": "label",
+                "valueKey": "value"
+            },
+            "designKey": "form-HMue",
+            "name": "YTHkaQ",
+            "hideLabel": false
+        },
+        {
+            "label": "文件上传",
+            "component": "Upload",
+            "props": { "uploadKey": "fileArr", "size": 1024, "limit": 999, "showFileList": true },
+            "designKey": "form-muq6",
+            "name": "S2RQOu",
+            "hideLabel": true
+        },
+        {
+            "label": "自增容器",
+            "component": "FormList",
+            "showChange": false,
+            "children": [
+                {
+                    "label": "文件名",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-bB0d",
+                    "name": "fileName"
+                },
+                {
+                    "label": "上传人员",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-E7TO",
+                    "name": "username"
+                },
+                {
+                    "label": "上传时间",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-bkRU",
+                    "name": "time"
+                }
+            ],
+            "props": { "mode": "table", "maxLines": 999, "class": "readonly", "allowAdd": false, "needFirst": false },
+            "designKey": "form-iiA8",
+            "name": "fileArr",
+            "hideLabel": true,
+            "hidden": false
+        }
+    ],
+    "labelWidth": "120px",
+    "labelSuffix": "：",
+    "labelAlign": "left",
+    "size": "default"
+}

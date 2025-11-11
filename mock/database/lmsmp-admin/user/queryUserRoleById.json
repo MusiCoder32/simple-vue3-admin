@@ -1,0 +1,8 @@
+{
+    "code": "200",
+    "message": "成功",
+    "data": [
+        { "roleName": "普通用户", "roleType": "SYSTEM", "userGrantMethod": "2", "roleId": "8", "userId": "20020291" }
+    ],
+    "traceId": "853ec4913ba54c1cb75ae5bc8d20634f"
+}

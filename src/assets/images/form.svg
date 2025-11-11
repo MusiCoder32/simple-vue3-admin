@@ -1,0 +1,12 @@
+<svg t="1716528461470" class="icon" viewBox="0 0 1024 1024" version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        p-id="2639" width="1em" height="1em">
+        <path
+                d="M307.2 768h102.4v51.2h-102.4zM307.2 614.4h409.6v51.2H307.2zM307.2 460.8h409.6v51.2H307.2zM307.2 307.2h358.4v51.2H307.2z"
+                p-id="2640"></path>
+        <path
+                d="M716.8 102.4V51.2H307.2v51.2H153.6v870.4h716.8V102.4h-153.6zM358.4 102.4h307.2v51.2H358.4V102.4z m460.8 819.2H204.8V153.6h102.4v51.2h409.6V153.6h102.4v768z"
+                p-id="2641"></path>
+        <path d="M358.4 102.4h307.2v51.2H358.4z" p-id="2642"></path>
+</svg>

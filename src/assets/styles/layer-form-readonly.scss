@@ -1,0 +1,164 @@
+.layer-form-readonly {
+    .el-form-item__label {
+        pointer-events: none;
+    }
+
+    .el-form-item {
+        margin-bottom: 0 !important;
+    }
+
+    .form-item-label {
+        color: #606266;
+        align-items: flex-start;
+        margin-top: 6px;
+    }
+
+    .el-input:not(.edit) {
+        pointer-events: none;
+
+        .el-input__wrapper {
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+        }
+        .el-input__inner {
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+            text-overflow: ellipsis;
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+        }
+
+        .el-input__suffix {
+            display: none !important;
+        }
+    }
+    .el-select:not(.edit) {
+        pointer-events: none;
+        .el-select__wrapper {
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+        }
+        .el-select__selected-item {
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+        }
+        .el-select__suffix {
+            display: none;
+        }
+        .el-input__prefix {
+            display: none !important;
+        }
+        .el-input__inner {
+            padding-left: 7px !important;
+        }
+        .el-input__suffix {
+            display: none !important;
+        }
+        .el-input__suffix-inner .icon-arrow-down {
+            display: none !important;
+        }
+
+        .el-tag__close {
+            display: none !important;
+        }
+        .el-tag {
+            padding-left: 5px;
+        }
+        .el-select__selection:has(.el-tag) {
+            padding-left: 7px;
+        }
+    }
+
+    .el-textarea:not(.edit) {
+        pointer-events: none;
+        .el-textarea__inner {
+            border: none;
+            box-shadow: none !important;
+            background: transparent !important;
+            pointer-events: none;
+            resize: none !important;
+            padding-left: 12px;
+            padding-top: 6px;
+            overflow: hidden;
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+            resize: none !important;
+        }
+        .el-input__count {
+            display: none !important;
+        }
+    }
+
+    .el-input-number:not(.edit) {
+        pointer-events: none;
+        .el-input__wrapper {
+            padding-left: 12px;
+            padding-right: 0;
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+        }
+        .el-input-number__decrease,
+        .el-input-number__increase {
+            display: none;
+        }
+
+        .el-input__inner {
+            text-align: left;
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+        }
+    }
+
+    .el-radio-group:not(.edit) {
+        pointer-events: none;
+        .el-radio__input,
+        .el-space__item:not(:has(.is-checked)) {
+            display: none;
+        }
+        .el-radio__label {
+            color: $primary-black !important;
+            padding: 0px 12px 0;
+        }
+    }
+
+    .el-cascader:not(.edit) {
+        pointer-events: none;
+        .el-input {
+            pointer-events: none;
+
+            .el-input__wrapper {
+                box-shadow: none !important;
+                pointer-events: none;
+                background-color: transparent !important;
+            }
+            .el-input__inner {
+                box-shadow: none !important;
+                pointer-events: none;
+                background-color: transparent !important;
+                text-overflow: ellipsis;
+                -webkit-text-fill-color: var(--el-text-color-primary) !important;
+                color: var(--el-text-color-primary) !important;
+            }
+            .el-input__suffix {
+                display: none !important;
+            }
+            .el-input__suffix-inner .icon-arrow-down {
+                display: none !important;
+            }
+        }
+    }
+
+    .el-date-editor:not(.edit) {
+        pointer-events: none !important;
+        box-shadow: none !important;
+
+        .el-input__prefix,
+        .el-range__icon {
+            display: none !important;
+        }
+    }
+}

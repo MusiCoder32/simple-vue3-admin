@@ -1,0 +1,11 @@
+<svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<rect id="矩形 800" width="16.000000" height="16.000000" fill="#C4C4C4" fill-opacity="0"/>
+	<circle id="椭圆 36" cx="8.000000" cy="8.000000" r="7.000000" fill="#C4C4C4" fill-opacity="0"/>
+	<circle id="椭圆 36" cx="8.000000" cy="8.000000" r="6.333333" stroke="#008DF9" stroke-opacity="1.000000" stroke-width="1.333333"/>
+	<rect id="矩形 768" x="4.332031" y="7.400391" width="7.333333" height="1.333333" fill="#008DF9" fill-opacity="1.000000"/>
+	<rect id="矩形 768" x="7.332031" y="11.666016" width="7.333333" height="1.333333" transform="rotate(-90 7.332031 11.666016)" fill="#008DF9" fill-opacity="1.000000"/>
+</svg>

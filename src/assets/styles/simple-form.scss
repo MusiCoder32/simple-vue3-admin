@@ -1,0 +1,291 @@
+.readonly {
+    .el-form-item__label {
+        pointer-events: none;
+    }
+    .grid-layout {
+        row-gap: 0px !important;
+    }
+    .form-item-grid {
+        margin-bottom: 0 !important;
+    }
+    .el-form-item {
+        margin-bottom: 0 !important;
+    }
+    .empty:not(:has(+ div > .edit)) {
+        display: block;
+        & + {
+            div {
+                display: none !important;
+            }
+        }
+    }
+    .form-item-label {
+        color: #606266;
+        align-items: flex-start;
+        margin-top: 6px;
+    }
+
+    .h-start-start > div > .el-input:not(.edit) {
+        pointer-events: none;
+
+        .el-input__wrapper {
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+        }
+        .el-input__inner {
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+            text-overflow: ellipsis;
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+        }
+
+        .el-input__suffix {
+            display: none !important;
+        }
+    }
+    .h-start-start > div > .el-select:not(.edit) {
+        pointer-events: none;
+        .el-select__wrapper {
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+        }
+        .el-select__selected-item {
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+        }
+        .el-select__suffix {
+            display: none;
+        }
+        .el-input__prefix {
+            display: none !important;
+        }
+        .el-input__inner {
+            padding-left: 7px !important;
+        }
+        .el-input__suffix {
+            display: none !important;
+        }
+        .el-input__suffix-inner .icon-arrow-down {
+            display: none !important;
+        }
+
+        .el-tag__close {
+            display: none !important;
+        }
+        .el-tag {
+            padding-left: 5px;
+        }
+        .el-select__selection:has(.el-tag) {
+            padding-left: 7px;
+        }
+    }
+
+    .el-textarea:not(.edit) {
+        pointer-events: none;
+        .el-textarea__inner {
+            border: none;
+            box-shadow: none !important;
+            background: transparent !important;
+            pointer-events: none;
+            resize: none !important;
+            padding-left: 12px;
+            padding-top: 6px;
+            overflow: hidden;
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+            resize: none !important;
+        }
+        .el-input__count {
+            display: none !important;
+        }
+    }
+
+    //用于实现在只读状态下,textarea文本内容过少时,由minRow导致的高度过高问题
+    //解决办法为,在只读状态下,使用另一个minRows为1的textarea框替换编辑状态下的textarea框
+    .textarea-edit:not(.edit) {
+        display: none;
+    }
+    .textarea-readonly:not(.edit) {
+        display: inline-block !important;
+    }
+
+    .el-input-number:not(.edit) {
+        pointer-events: none;
+        .el-input__wrapper {
+            padding-left: 12px;
+            padding-right: 0;
+            box-shadow: none !important;
+            pointer-events: none;
+            background-color: transparent !important;
+        }
+        .el-input-number__decrease,
+        .el-input-number__increase {
+            display: none;
+        }
+
+        .el-input__inner {
+            text-align: left;
+            -webkit-text-fill-color: var(--el-text-color-primary) !important;
+            color: var(--el-text-color-primary) !important;
+        }
+    }
+
+    .el-radio-group:not(.edit) {
+        pointer-events: none;
+        .el-radio__input,
+        .el-space__item:not(:has(.is-checked)) {
+            display: none;
+        }
+        .el-radio__label {
+            color: $primary-black !important;
+            padding: 0px 12px 0;
+        }
+    }
+
+    .el-cascader:not(.edit) {
+        pointer-events: none;
+        .el-input {
+            pointer-events: none;
+
+            .el-input__wrapper {
+                box-shadow: none !important;
+                pointer-events: none;
+                background-color: transparent !important;
+            }
+            .el-input__inner {
+                box-shadow: none !important;
+                pointer-events: none;
+                background-color: transparent !important;
+                text-overflow: ellipsis;
+                -webkit-text-fill-color: var(--el-text-color-primary) !important;
+                color: var(--el-text-color-primary) !important;
+            }
+            .el-input__suffix {
+                display: none !important;
+            }
+            .el-input__suffix-inner .icon-arrow-down {
+                display: none !important;
+            }
+        }
+    }
+    .form-list:not(.edit) {
+        .read-hidden {
+            display: none !important;
+        }
+    }
+
+    // .el-input__suffix,
+    // input::-webkit-input-placeholder,
+    // .el-input__suffix-inner .icon-arrow-down,
+    .upload-file-uploader,
+    .upload_tip,
+    .el-input-group__append,
+    .file-upload-remove {
+        display: none !important;
+    }
+
+    .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+        background-color: transparent !important;
+    }
+
+    .el-date-editor:not(.edit) {
+        pointer-events: none !important;
+        box-shadow: none !important;
+
+        .el-input__prefix,
+        .el-range__icon {
+            display: none !important;
+        }
+
+        // .el-input__inner {
+        //     padding-left: 7px !important;
+        // }
+    }
+
+    .upload-file {
+        .my-form-label {
+            display: inline !important;
+        }
+    }
+
+    .bmap-m-tip,
+    .bmap-m-search {
+        display: none !important;
+        pointer-events: none !important;
+    }
+
+    .bmap-container {
+        pointer-events: none;
+    }
+
+    //除去 ButtonForm Upload FormList 外的表单组件为空时都显示为-- 无placeholder
+    /*::placeholder {
+        color: transparent !important;
+    } */
+
+    .el-input-group__prepend {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        //width: auto;
+        padding: 0;
+
+        &:after {
+            content: ':';
+        }
+    }
+
+    .form-list-table {
+        td:has(.form-readonly) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .el-form-item__label,
+        .el-input__prefix {
+            display: none !important;
+        }
+        .el-input__wrapper {
+            padding: 0 !important;
+        }
+        .el-textarea:not(.edit) .el-textarea__inner {
+            padding-left: 0 !important;
+            padding-top: 3px !important;
+        }
+        .el-select:not(.edit) .el-select__wrapper {
+            padding-left: 0 !important;
+        }
+        .empty {
+            padding-left: 2px !important;
+        }
+    }
+}
+
+.form-list-table {
+    .form-readonly {
+        td:has(.form-readonly) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .el-form-item__label,
+        .el-input__prefix {
+            display: none !important;
+        }
+        .el-input__wrapper {
+            padding: 0 !important;
+        }
+        .el-textarea:not(.edit) .el-textarea__inner {
+            padding-left: 0 !important;
+            padding-top: 3px !important;
+        }
+        .el-select:not(.edit) .el-select__wrapper {
+            padding-left: 0 !important;
+        }
+        .empty {
+            padding-left: 2px !important;
+        }
+    }
+}

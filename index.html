@@ -1,0 +1,27 @@
+<!doctype html>
+<!--<%- buildTime %>-->
+<!--<%- buildMode %>-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <!-- #region loading -->
+        <div
+            id="full-screen-loading-self"
+            class="el-loading-mask is-fullscreen z10 bg-white"
+            style="z-index: 2003; display: none">
+            <div class="el-loading-spinner">
+                <svg class="circular" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- #endregion loading -->
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>

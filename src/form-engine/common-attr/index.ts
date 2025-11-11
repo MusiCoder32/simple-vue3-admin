@@ -1,0 +1,6 @@
+export { default as basicAttr } from './basic-attr'
+export { default as highAttr } from './high-attr'
+export { default as apiAttr } from './api-attr'
+export { default as linkageAttr } from './linkage-attr'
+export { default as optionAttr } from './option-attr'
+export { default as mergeAttr } from './merge-attr'

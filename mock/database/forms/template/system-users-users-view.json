@@ -1,0 +1,361 @@
+{
+    "labelWidth": 150,
+    "labelAlign": "left",
+    "labelSuffix": "",
+    "size": "default",
+    "items": [
+        {
+            "component": "Collapse",
+            "children": [
+                {
+                    "title": "authority.viewDetail.basicInfo",
+                    "name": "name1",
+                    "children": [
+                        {
+                            "component": "Grid",
+                            "children": [
+                                {
+                                    "label": "authority.viewDetail.name",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "class": "",
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-b8tS",
+                                    "name": "name",
+                                    "change": [{ "expand": true }],
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.code",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-8aVt",
+                                    "name": "staffCode",
+                                    "change": [{ "expand": true }],
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.subCompany",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-zeTV",
+                                    "name": "ownerCom",
+                                    "change": [{ "expand": true }],
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.businessGroup",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-xHFC",
+                                    "name": "orgGroupName",
+                                    "change": [{ "expand": true }],
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.division",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-fm9V",
+                                    "name": "orgName",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.dept",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-xRuV",
+                                    "name": "deptName",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.email",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-Gaxk",
+                                    "name": "email",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.costCenter",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-ayF2",
+                                    "name": "costCenterCode",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.status",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-uQjM",
+                                    "name": "onjobStatus",
+                                    "change": [{ "expand": true }],
+                                    "rules": [{ "expand": true }]
+                                }
+                            ],
+                            "props": { "columns": 2, "column-gap": 100, "row-gap": 20 },
+                            "designKey": "form-gxgF",
+                            "name": "7zj8QA"
+                        }
+                    ],
+                    "designKey": "form-4f3j",
+                    "checked": true
+                },
+                {
+                    "title": "authority.viewDetail.rolesInfo",
+                    "name": "name2",
+                    "children": [
+                        {
+                            "label": "自增容器",
+                            "component": "FormList",
+                            "children": [
+                                {
+                                    "label": "authority.viewDetail.roleType",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "options": [
+                                            { "label": "选项1", "value": "value1" },
+                                            { "label": "选项2", "value": "value2" },
+                                            { "label": "选项3", "value": "value3" }
+                                        ],
+                                        "placeholder": "",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "localOptions": "{{ RoleTypeOptions }}"
+                                    },
+                                    "designKey": "form-Dfla",
+                                    "name": "roleType"
+                                },
+                                {
+                                    "label": "authority.viewDetail.roleName",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "class": "form-readonly ",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "ellipsis": true
+                                    },
+                                    "designKey": "form-TShl",
+                                    "name": "roleName",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.configMode",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "options": [
+                                            { "label": "选项1", "value": "value1" },
+                                            { "label": "选项2", "value": "value2" },
+                                            { "label": "选项3", "value": "value3" }
+                                        ],
+                                        "placeholder": "",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "localOptions": "{{ UserGrantMethodOptions }}"
+                                    },
+                                    "designKey": "form-ogbg",
+                                    "name": "userGrantMethod"
+                                }
+                            ],
+                            "props": {
+                                "mode": "table",
+                                "showIndex": true,
+                                "allowAdd": false,
+                                "class": "form-readonly",
+                                "showPage": false
+                            },
+                            "designKey": "form-1FJJ",
+                            "name": "rolesArr",
+                            "hideLabel": true,
+                            "showChange": false
+                        }
+                    ],
+                    "checked": true,
+                    "designKey": "form-w5rS"
+                },
+                {
+                    "title": "authority.viewDetail.participateProject",
+                    "name": "name3",
+                    "children": [
+                        {
+                            "label": "自增容器",
+                            "component": "FormList",
+                            "children": [
+                                {
+                                    "label": "authority.viewDetail.projectNo",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "class": "form-readonly ", "readonly": true },
+                                    "designKey": "form-4XtD",
+                                    "name": "projectNo"
+                                },
+                                {
+                                    "label": "authority.viewDetail.projectName",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "class": "{{`form-readonly  ${$row.isSecret ? 'secret' : ''}`}}",
+                                        "readonly": true,
+                                        "ellipsis": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-fnYj",
+                                    "name": "projectName"
+                                },
+                                {
+                                    "label": "authority.viewDetail.projectType",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "class": "form-readonly ",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "ellipsis": false
+                                    },
+                                    "designKey": "form-m4Io",
+                                    "name": "projectType",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.projectRole",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "class": "form-readonly ",
+                                        "clearable": false,
+                                        "readonly": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-S4Ae",
+                                    "name": "projectRole"
+                                }
+                            ],
+                            "props": {
+                                "mode": "table",
+                                "showIndex": true,
+                                "allowAdd": false,
+                                "class": "form-readonly",
+                                "showPage": true
+                            },
+                            "designKey": "form-DInD",
+                            "name": "projectArr",
+                            "hideLabel": true,
+                            "showChange": false
+                        }
+                    ],
+                    "checked": true,
+                    "designKey": "form-wPwH",
+                    "expand": true,
+                    "hidden": true
+                },
+                {
+                    "title": "authority.viewDetail.updateRecord",
+                    "name": "name4",
+                    "children": [
+                        {
+                            "label": "自增容器",
+                            "component": "FormList",
+                            "children": [
+                                {
+                                    "label": "authority.viewDetail.regenerator",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "class": "form-readonly ",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-ESvk",
+                                    "name": "operateUser"
+                                },
+                                {
+                                    "label": "authority.viewDetail.updateTime",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "on": [{ "expand": true }], "readonly": true },
+                                    "designKey": "form-3Oy8",
+                                    "name": "operateTime",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "authority.viewDetail.updateContent",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "class": "form-readonly ",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "ellipsis": true
+                                    },
+                                    "designKey": "form-FnW0",
+                                    "name": "operateContent",
+                                    "change": [{ "expand": true }]
+                                }
+                            ],
+                            "props": {
+                                "mode": "table",
+                                "showIndex": true,
+                                "allowAdd": false,
+                                "class": "form-readonly"
+                            },
+                            "designKey": "form-LzrY",
+                            "name": "recordArr",
+                            "hideLabel": true,
+                            "showChange": false
+                        }
+                    ],
+                    "checked": true,
+                    "designKey": "form-K3TD"
+                }
+            ],
+            "designKey": "form-GyWK",
+            "name": "RFRnh1"
+        }
+    ]
+}

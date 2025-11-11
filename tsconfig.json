@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "es2022",
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true, // 可选，根据具体情况决定是否需要
+        "noImplicitAny": false,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "plugins/*": ["./plugins/*"]
+        },
+        "lib": ["esnext", "dom"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "wps-sdk/index.d.ts"],
+    "exclude": ["node_modules"]
+}

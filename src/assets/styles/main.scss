@@ -1,0 +1,326 @@
+@import 'mixin';
+@import 'cover';
+@import 'layer-form-readonly';
+@import 'simple-form';
+@import 'print';
+
+body,
+html {
+    //@include bg_color($background-color-theme1);
+    color: $primary-black;
+    background: $primary-bg;
+    font-size: 16px;
+
+    font-family: 'SYR', 'Microsoft YaHei', 'sans-serif';
+    height: 100%;
+    width: 100%;
+}
+body[data-select='none'] {
+    user-select: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+.white {
+    color: white !important;
+}
+
+.color-blue {
+    color: $primary-blue;
+}
+
+.color-blue-4 {
+    color: $blue-4;
+}
+.color-gray-9 {
+    color: $gray-9;
+}
+.color-gray-6 {
+    color: $gray-6;
+}
+.color-black-3 {
+    color: $primary-black !important;
+}
+.bg-line-gray {
+    background-color: $gray-e;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+.bg-red {
+    background: red;
+}
+
+.danger-color {
+    color: red;
+}
+.warning-color {
+    color: #faad14;
+}
+.black-6 {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+ul,
+li {
+    list-style: unset;
+}
+::-webkit-scrollbar {
+    //滚动条整体样式 高宽分别对应横竖滚动条的尺寸
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(144, 147, 153, 0.3);
+    //滚动条里面小方块
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    //滚动条里面轨道
+    border-radius: 4px;
+}
+
+.basic-color-red {
+    @include basic-color(#f56c6c, #fef0f0, #fde2e2);
+}
+.basic-color-yellow {
+    @include basic-color(#e6a23c, #fcf6ec, #faecd8);
+}
+.basic-color-green {
+    @include basic-color(#67c23a, #f0f9eb, #e1f3d8);
+}
+.basic-color-gray {
+    @include basic-color(#909399, #f4f4f5, #e9e9eb);
+}
+.basic-color-blue {
+    @include basic-color(#409eff, #ecf5ff, #d9ecff);
+}
+.basic-color-mintgreen {
+    @include basic-color(#1094a3, #e7f4f6, #1094a3);
+}
+.basic-color-purple {
+    @include basic-color(#6f25b8, #f1e9f8, #6f25b8);
+}
+.border-bottom {
+    border-bottom: 1px solid $gray-e;
+}
+.border-gray {
+    @include basic-color(#303133, none, #e9e9eb);
+}
+.form-footer {
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+    background: white;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    &-center {
+        @extend .form-footer;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+    }
+    &-layer-right {
+        @extend .form-footer;
+        height: 62px;
+        align-items: start;
+        padding-top: 10px;
+        justify-content: flex-end;
+        padding-right: 24px;
+    }
+}
+.form-list {
+    .cell:has(.secret) {
+        color: #f56c6c;
+        display: flex;
+        justify-self: start;
+        > div {
+            width: 100%;
+        }
+
+        &:hover {
+            color: #f59393;
+        }
+        &::after {
+            content: '★';
+            display: inline;
+            color: currentColor;
+        }
+    }
+}
+//纯csshover效果,兼容性可能问题,父元素必需设置p-r,否则会被css-ell的over-flow:hidden隐藏掉
+//style container只检测内部class，无法通过container-name指定检测其他元素
+.css-ell {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    --trunk: false;
+    animation: check 1s;
+    animation-timeline: scroll(x self);
+}
+
+@keyframes check {
+    from,
+    to {
+        --trunk: true;
+    }
+}
+
+@container style(--trunk: true) {
+    .css-ell::after {
+        content: '111111';
+        // content: attr(data-title);
+        position: absolute;
+        top: -20px;
+        width: fit-content;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+        background-color: $primary-black;
+        padding: 5px 11px;
+        border-radius: 4px;
+        color: #fff;
+        opacity: 0;
+        border-radius: 4px;
+        visibility: hidden;
+        transition: 0.2s 0.1s;
+    }
+    .css-ell:hover::after {
+        cursor: default;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+// 列表页保密项目靠右样式
+// .project-secret {
+//     display: flex;
+//     justify-content: space-between;
+//     position: relative;
+//     &::after {
+//         content: '★';
+//         color: #f56c6c;
+//         right: 0px;
+//         margin-left: 10px;
+//     }
+//     &:hover {
+//         &::after {
+//             color: #f59393;
+//         }
+//     }
+//     .ell-a-t {
+//         position: absolute;
+//         right: 0;
+//         width: 14px;
+//         height: 100%;
+//     }
+// }
+
+// 列表页保密项目
+.project-secret {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    &::after {
+        content: '★';
+        color: #f56c6c;
+        right: 0px;
+        transform: translate(-14px, 0);
+    }
+    &:hover {
+        &::after {
+            color: #f59393;
+        }
+    }
+    .ell-a-t {
+        width: 14px;
+        height: 20px;
+        margin-left: 6px;
+        z-index: 1;
+    }
+}
+
+.has-update {
+    &::after {
+        content: '有更新';
+        display: inline-block;
+        background: #67c23a;
+        margin-left: 8px;
+        border-radius: 18px;
+        padding: 0px 8px;
+        font-size: 12px;
+        color: white;
+        line-height: 20px;
+    }
+}
+
+//已读消息
+.read-notice {
+    color: rgba(0, 0, 0, 0.45);
+}
+.unread-notice {
+    cursor: pointer;
+    &:hover {
+        color: rgb(0, 141, 249);
+    }
+}
+.alert-blue {
+    background: #ecf5ff !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    white-space: pre-wrap;
+
+    .el-alert__description {
+        color: #008df9 !important;
+        margin-top: 4px !important;
+    }
+    .el-alert__icon {
+        color: #008df9;
+        width: 20px !important;
+        align-self: flex-start;
+    }
+}
+.alert-white {
+    background: #ffffff !important;
+
+    .el-alert__description {
+        color: #303133 !important;
+        margin-right: 12px;
+    }
+
+    .el-alert__icon {
+        color: #008df9;
+        width: 18px !important;
+        align-self: flex-start;
+    }
+}
+//详情页标题处竖线
+.detail-title-line {
+    height: 24px;
+    width: 1px;
+    background-color: $gray-e;
+}
+
+.text-wrap {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+// 详情页面包屑右侧按钮
+.detail-crumb-right-btn {
+    position: absolute;
+    right: 36px;
+}

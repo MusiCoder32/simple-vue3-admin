@@ -1,0 +1,205 @@
+/* 打印时隐藏指定元素 */
+.print {
+    @page {
+        size: A4; /* 指定纸张类型（如 A4、Letter） A4尺寸794px × 1123px */
+        margin: 0; /* 去除页边距，使内容可占满物理页面 */
+    }
+    .component-box {
+        width: 210mm !important;
+        min-width: 210mm !important;
+    }
+
+    .break-after-always {
+        break-after: page;
+        page-break-after: always;
+    }
+    .break-before-always {
+        break-before: page;
+        page-break-before: always;
+    }
+
+    .only-print {
+        display: block;
+    }
+    .no-print,
+    .form-footer-center {
+        display: none !important;
+    }
+    .el-watermark > div:last-child {
+        display: none;
+    }
+    //     .el-form-item__label {
+    //         .required {
+    //             visibility: hidden;
+    //         }
+    //     }
+    .grid-layout {
+        grid-template-columns: repeat(2, 1fr) !important;
+        column-gap: 5px !important;
+    }
+    .form-generator {
+        .el-select__wrapper {
+            padding-left: 0px;
+        }
+        .el-input__wrapper {
+            padding-left: 0px;
+        }
+        .el-radio__label {
+            padding-left: 0px !important;
+        }
+
+        #NumberInput {
+            .el-input__wrapper {
+                padding-left: 0;
+            }
+        }
+    }
+    .simple-table {
+        display: block !important;
+        .el-button > span {
+            align-items: flex-start !important;
+            white-space: pre-wrap;
+            word-break: break-all;
+            text-align: start;
+        }
+        .el-button.is-text {
+            color: $primary-black;
+        }
+        // position: fixed;
+        .el-table__body-wrapper {
+            .el-scrollbar__view {
+                display: block !important;
+            }
+        }
+        // 解决隐藏列后,表格无法重新自动布局问题
+        .el-table__inner-wrapper:has(.no-print.operate) {
+            colgroup {
+                col:last-child {
+                    display: none;
+                }
+            }
+        }
+        .el-table__inner-wrapper {
+            display: block;
+        }
+        .empty {
+            padding-left: 0px !important;
+        }
+        .el-table__body .el-table__row > .el-table__cell > .cell,
+        .cell > span {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        // 隐藏折叠列表的折叠按钮
+        .el-table__expand-icon {
+            display: none;
+            pointer-events: none;
+        }
+    }
+
+    @if $env == 'development' {
+        .print-mask {
+            display: none;
+        }
+    } @else {
+        .print-mask {
+            display: block;
+        }
+    }
+    .print-alert {
+        display: block;
+        // position: fixed;
+    }
+
+    .el-collapse-item {
+        .el-collapse-item__header {
+            pointer-events: none;
+            .el-collapse-item__arrow {
+                display: none;
+            }
+        }
+    }
+    .el-collapse-item {
+        margin-bottom: 0 !important;
+        // break-inside: avoid;
+        // break-after: avoid;
+        // break-before: avoid;
+    }
+    .inform-init-record-collapse {
+        margin-top: 0 !important;
+    }
+    // el-tab样式
+    .only-print {
+        .el-tabs .el-tabs__header .el-tabs__nav-wrap {
+            margin-bottom: 0;
+            .el-tabs__active-bar {
+                display: none;
+            }
+            .el-tabs__item {
+                font-weight: 600;
+                color: #303133;
+                font-size: 16px;
+            }
+        }
+    }
+    // 卡片隐藏折叠箭头
+    .el-card > .el-card__header > .h-between-center > div {
+        display: none !important;
+    }
+    .container-height {
+        height: var(--container-height) !important;
+    }
+    .el-select__selection {
+        span {
+            height: auto !important;
+            overflow: visible;
+            text-wrap: wrap;
+            word-break: break-all;
+        }
+    }
+    // 解决列表中PDF导出select组件的换行问题
+    .el-table__body .cell {
+        overflow: visible;
+        .ell-t {
+            overflow: visible;
+            text-wrap: wrap;
+            word-break: break-all;
+            .el-select__placeholder {
+                height: auto !important;
+                overflow: visible;
+                text-wrap: wrap;
+                word-break: break-all;
+            }
+        }
+    }
+    .content-box {
+        padding: 0;
+        > .el-scrollbar {
+            padding: 0 !important;
+        }
+    }
+    .pb48:has(> .breadcrumb-details) {
+        padding-bottom: 0 !important;
+    }
+    .el-loading-spinner {
+        top: 50vh;
+    }
+}
+body {
+    .only-print,
+    .print-alert,
+    .print-mask {
+        display: none;
+    }
+}
+@media print {
+    .print-alert {
+        display: none !important;
+    }
+    .print-mask {
+        display: none;
+    }
+    // .el-table__expand-icon {
+    //     display: none;
+    // }
+}

@@ -1,0 +1,543 @@
+@import 'mixin';
+
+body {
+    //高德地图
+    .amap-container {
+        //隐藏高德地图图标
+        .amap-logo {
+            display: none !important;
+        }
+        //更改测距默认样式
+        .amap-marker-content,
+        .amap-overlay-text-container,
+        .amap-ranging-label {
+            color: #111213;
+        }
+        .amap-toolbar {
+            color: #a7c4ff;
+            background:
+                linear-gradient(135deg, transparent 3px, #296fff4c 0) top left,
+                linear-gradient(-135deg, transparent 3px, #296fff4c 0) top right,
+                linear-gradient(-45deg, transparent 3px, #296fff4c 0) bottom right,
+                linear-gradient(45deg, transparent 3px, #296fff4c 0) bottom left;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            .amap-ctrl-zoomin {
+                width: 47.56px;
+                color: #a7c4ff !important;
+                &:hover {
+                    background:
+                        linear-gradient(135deg, transparent 3px, #296fff 0) top left,
+                        linear-gradient(-135deg, transparent 3px, #296fff 0) top right,
+                        linear-gradient(-45deg, transparent 3px, #296fff 0) bottom right,
+                        linear-gradient(45deg, transparent 3px, #296fff 0) bottom left;
+                    background-size: 50% 50%;
+                    background-repeat: no-repeat;
+                    color: white !important;
+                }
+            }
+            .amap-ctrl-zoomout {
+                width: 47.56px;
+                color: #a7c4ff !important;
+                &:hover {
+                    background:
+                        linear-gradient(135deg, transparent 3px, #296fff 0) top left,
+                        linear-gradient(-135deg, transparent 3px, #296fff 0) top right,
+                        linear-gradient(-45deg, transparent 3px, #296fff 0) bottom right,
+                        linear-gradient(45deg, transparent 3px, #296fff 0) bottom left;
+                    background-size: 50% 50%;
+                    background-repeat: no-repeat;
+                    color: white !important;
+                }
+            }
+            span:first-child {
+                border: 0;
+            }
+        }
+    }
+
+    //解决element-ui表格展开与simply-ellipsis样式冲突问题
+    .self-column-ell {
+        .cell {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    .layer-form {
+        max-height: 80vh;
+        max-width: 80vw;
+        padding: 0;
+        .el-form-item {
+            margin-bottom: 16px;
+        }
+        .el-dialog__header {
+            border-bottom: 1px solid #e5e7e9;
+            padding-left: 24px;
+            padding-top: 16px;
+        }
+        .el-dialog__headerbtn {
+            height: 58px;
+        }
+        &:has(.layer-table) {
+            height: 80vh;
+        }
+        &:has(.layer-video) {
+            height: auto; //video组件设置宽度后,高度会自动撑开
+        }
+        .el-dialog__body {
+            padding-left: 24px;
+            padding-right: 24px;
+            max-height: calc(80vh - 58px);
+            padding-bottom: 92px;
+            overflow-y: overlay;
+
+            overflow-x: hidden;
+            &:not(:has(+ .el-dialog__footer)) {
+                padding-bottom: 30px;
+            }
+            &:has(.layer-table) {
+                height: calc(80vh - 58px);
+                padding-top: 20px;
+            }
+            &:has(.layer-video) {
+                height: auto;
+                padding-bottom: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .el-dialog__footer {
+            padding-top: 0;
+        }
+        .el-form--label-top .el-form-item .el-form-item__label {
+            margin-bottom: 0 !important;
+        }
+
+        .el-collapse,
+        .el-collapse-item__wrap,
+        .el-collapse-item__header {
+            border: none !important;
+        }
+    }
+    .no-title-layer {
+        .el-dialog__header {
+            border-bottom: none;
+            padding-left: 24px;
+            padding-top: 16px;
+        }
+    }
+    .no-title-layer-top {
+        .el-dialog__header {
+            border-bottom: none;
+            padding-left: 24px;
+            padding-top: 0;
+            height: 60px;
+            margin-bottom: 4px;
+        }
+        .el-dialog__headerbtn {
+            height: 74px;
+        }
+        .el-dialog__body {
+            border-top: 1px solid #e5e7e9;
+            max-height: calc(80vh - 64px);
+        }
+    }
+    .simple-table {
+        // 用于解决嵌套表格中开启弹窗时,遮罩层不能位于顶层,带来的样式异常
+        tr:not(.el-table__row):has(.layer-form) {
+            position: relative;
+            z-index: 2;
+        }
+        .el-table__body-wrapper:has(.layer-form) {
+            position: relative;
+            z-index: 10;
+        }
+        .el-radio__label {
+            display: none;
+        }
+        .el-form-item__label {
+            line-height: 16px;
+            align-items: center;
+        }
+        .el-form-item__error {
+            padding-top: 0px;
+        }
+    }
+    // 去掉status-detail的dialog的header
+    .status-detail {
+        .el-dialog.is-draggable .el-dialog__header {
+            display: none;
+        }
+    }
+    .el-menu {
+        border-right: none;
+    }
+
+    .el-breadcrumb__inner a,
+    .el-breadcrumb__inner.is-link {
+        font-weight: normal;
+    }
+    .el-breadcrumb__inner {
+        color: #a8abb2;
+    }
+    //表单设计器
+    .form-designer {
+        font-family: 'Microsoft YaHei', 'sans-serif';
+        .grid-layout {
+            display: grid;
+            align-items: start;
+            row-gap: 16px;
+            column-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    //表单渲染器
+    .form-generator {
+        container-type: inline-size;
+        .grid-layout {
+            display: grid;
+            align-items: start;
+            row-gap: 16px;
+            column-gap: 50px;
+        }
+
+        @container (min-width: 1600px) {
+            .grid-layout {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @container (max-width: 1600px) {
+            .grid-layout {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @container (max-width: 900px) {
+            .grid-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .parent > .two > p {
+            color: red;
+        }
+
+        // 特定表单项栅格布局为两列
+        .el-form-item:has(.grid-two) {
+            @media screen and (max-width: 1920px) {
+                width: calc(66.66% - 33.33px);
+            }
+            @media screen and (min-width: 1920px) {
+                width: calc(50% - 50px);
+            }
+        }
+        // 特定表单项栅格布局为整行
+        .el-form-item:has(.column-two) {
+            grid-column: 1 / -1;
+        }
+
+        .el-form-item:has(.form-list) {
+            width: 100% !important;
+        }
+        .el-form-item.list-item {
+            width: 100% !important;
+        }
+
+        .el-collapse {
+            border: none !important;
+        }
+        //折叠组件增加圆角效果
+        .el-collapse-item__wrap {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .el-collapse-item__content,
+        .el-collapse-item__header {
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 4px;
+        }
+        .el-collapse-item {
+            &:first-child {
+                .el-collapse-item__header {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+        //去除表单label的padding
+        .el-form-item__label {
+            padding: 0;
+            height: auto;
+        }
+        //下拉多选组件选中结果文本
+        .el-select__tags-text {
+            color: $primary-black;
+            font-size: 14px;
+        }
+        .el-form-item__error {
+            position: relative;
+            top: 0;
+        }
+        // 下拉多选禁用样式调整
+        .el-tag--info {
+            background-color: #e8eaed;
+            .el-select__tags-text {
+                color: #a8abb2;
+            }
+        }
+        // 下拉多选正常可编辑样式
+        .is-closable {
+            background-color: #f4f4f5;
+            .el-select__tags-text {
+                color: #303133;
+            }
+        }
+        // 下拉多选行高及垂直居中
+        .el-tag__content {
+            height: 24px;
+            .el-select__tags-text {
+                height: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .not-collapse {
+        .form-generator {
+            .form-item-grid {
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+            }
+            .el-collapse-item {
+                margin-bottom: 0 !important;
+                .el-collapse-item__header,
+                .el-collapse-item__content {
+                    padding-right: 0;
+                    padding-left: 0;
+                    padding-bottom: 0 !important;
+                }
+                .el-collapse-item__wrap {
+                    border: none;
+                }
+                .el-collapse-item__header {
+                    pointer-events: none;
+                    .el-collapse-item__arrow {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .el-drawer {
+        .el-drawer__body {
+            padding-top: 0;
+        }
+        .form-generator {
+            .el-collapse-item {
+                margin-bottom: 0 !important;
+                .el-collapse-item__header,
+                .el-collapse-item__content {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .el-collapse-item__header {
+                    pointer-events: none;
+                    .el-collapse-item__arrow {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    //解决菜单选中项父级无选中效果问题
+    .el-sub-menu.is-active > .el-sub-menu__title {
+        color: $primary-blue !important;
+    }
+    .el-menu-item.is-active {
+        background: #e6f7ff !important;
+        border-right: 2px solid #1890ff;
+    }
+    //文件上传拖拽框高度调整
+    .el-upload-dragger {
+        padding: 18px 10px !important;
+    }
+    // 去掉tab栏头部的margin
+    .el-tabs > .el-tabs__header {
+        margin: 0;
+    }
+    .el-button,
+    .el-input__inner {
+        font-family: SYR;
+    }
+
+    .el-collapse-item__content {
+        padding-bottom: 20px !important;
+    }
+    .el-collapse-item__header {
+        font-size: 16px;
+        font-family: SYR;
+        margin-bottom: -1px;
+        > h4 {
+            font-style: normal !important;
+            line-height: 32px;
+            font-weight: 400;
+        }
+    }
+    table > thead > tr > th div {
+        font-weight: 500;
+    }
+
+    //tooltip提示换行
+    .el-popper[role='tooltip'] {
+        white-space: pre-wrap;
+        max-width: 100%;
+    }
+    // 抽屉组件
+    .el-drawer > .el-drawer__header {
+        padding-top: 0px !important;
+        height: 56px;
+        font-size: 18px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        padding: 0 24px 0 24px;
+        border-bottom: 1px solid #e5e7e9;
+        margin-bottom: 0 !important;
+    }
+    .el-drawer > .el-drawer__header > .el-drawer__title {
+        font-size: 18px !important;
+    }
+
+    // 行内按钮样式覆盖
+    .cell > .h-start-center > .el-button {
+        padding: 6px 0;
+    }
+    .cell > .h-start-center > .el-button:not([style*='display: none']) + .el-button {
+        margin-left: 16px;
+    }
+    .cell > .h-start-center > .el-button[style*='display: none'] + .el-button {
+        margin-left: 0px;
+    }
+    .long-label .el-checkbox__label {
+        white-space: normal;
+    }
+
+    // 进度条颜色更改
+    .el-step__title.is-success {
+        color: #008df9;
+        font-weight: normal;
+    }
+    .el-step__head.is-success {
+        border-color: #008df9;
+        color: #008df9;
+        .el-step__line {
+            height: 1px !important;
+            background-color: #008df9 !important;
+        }
+    }
+    .el-step__description.is-success {
+        color: #008df9;
+    }
+    .el-step.is-horizontal .el-step__line {
+        height: 1px;
+        background-color: #dcdfe5;
+    }
+    .el-step__head.is-process {
+        border-color: #008df9;
+        color: #008df9;
+    }
+    .el-step__description.is-process {
+        color: #008df9;
+    }
+    .el-step__title.is-process {
+        font-weight: normal;
+        color: #008df9;
+    }
+    .el-step__title.is-wait {
+        font-weight: normal;
+    }
+
+    // 面包屑分隔符
+    .el-breadcrumb__separator {
+        font-weight: normal;
+    }
+    // tab栏横线背景色
+    .el-tabs__nav-wrap:after {
+        background-color: #e3e6ed;
+        height: 1px;
+    }
+    //解决表单项label过长时换行显示后，两行间距过远问题
+    .form-item-label {
+        line-height: normal;
+        display: flex;
+        align-items: center;
+    }
+    .el-drawer__header {
+        color: $primary-black;
+    }
+
+    .el-calendar {
+        --el-calendar-cell-width: 36px;
+        .el-calendar__body {
+            padding: 0;
+        }
+        .el-calendar-day {
+            text-align: center;
+        }
+    }
+    .el-input__wrapper {
+        padding: 0px 11px;
+    }
+    // 隐藏表头全选框
+    .none-select-all .el-table .el-table__header th .el-checkbox__input .el-checkbox__inner {
+        display: none; /* 隐藏全选复选框 */
+    }
+    .el-popover {
+        --el-popover-border-radius: 8px;
+    }
+    .el-radio-button {
+        --el-radio-button-checked-bg-color: #e5f1fc;
+        --el-radio-button-checked-text-color: var(--el-color-primary);
+        --el-radio-button-checked-border-color: #a3d0fd;
+    }
+
+    .expand-table {
+        .el-table__cell.el-table__expanded-cell {
+            padding: 0 !important;
+            border: none !important;
+        }
+        .simple-table {
+            background-color: #f5f7fa !important;
+            padding: 0 0 0 72px !important;
+        }
+    }
+    .el-message-box__message {
+        white-space: pre-wrap;
+    }
+
+    .component-box {
+        .el-loading-mask {
+            border-radius: 4px;
+        }
+    }
+
+    // element提示弹窗内容区域文本两端对齐
+    .el-message-box .el-message-box__content .el-message-box__container .el-message-box__message {
+        text-align: justify;
+        hyphens: auto;
+    }
+    // 提示ElMessage行高调整高一点
+    .el-message .el-message__content {
+        line-height: 1.3;
+    }
+    // 风险告知发起第二步详情审批记录折叠面板
+    .inform-init-record-collapse {
+        margin-top: 16px;
+    }
+}

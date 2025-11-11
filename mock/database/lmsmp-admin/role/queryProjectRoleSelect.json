@@ -1,0 +1,14 @@
+{
+    "code": "200",
+    "message": "成功",
+    "data": [
+        { "roleId": "18", "roleName": "申请事业部参与人" },
+        { "roleId": "19", "roleName": "评审事业部参与人" },
+        { "roleId": "15", "roleName": "申请人" },
+        { "roleId": "21", "roleName": "合同上传人" },
+        { "roleId": "16", "roleName": "主办律师" },
+        { "roleId": "20", "roleName": "评审事业部对接人" },
+        { "roleId": "17", "roleName": "协办律师" }
+    ],
+    "traceId": "83118c9f68b642d1a3bfa3772a7a653d"
+}

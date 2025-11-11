@@ -1,0 +1,21 @@
+import attr from './attr'
+import Grid from './Grid.vue'
+
+export default {
+    name: '栅格布局',
+    icon: 'grid',
+    type: 'layout',
+    component: Grid,
+    order: 3,
+
+    initialValues: {
+        component: 'Grid',
+        children: [],
+        props: {
+            columns: 2,
+            'column-gap': 100,
+            'row-gap': 20,
+        },
+    },
+    attr,
+}

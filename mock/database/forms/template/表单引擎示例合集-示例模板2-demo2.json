@@ -1,0 +1,160 @@
+{
+    "items": [
+        {
+            "component": "Grid",
+            "children": [
+                {
+                    "label": "姓名",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-d1TW",
+                    "name": "name",
+                    "change": [
+                        {
+                            "expand": true,
+                            "value": "{{  '姓名：' + $values.name + '年龄：' + $values.age  }}",
+                            "target": "base"
+                        },
+                        { "expand": true, "target": "oldNames.*.oldName", "value": "{{ $values.name }}" },
+                        { "expand": true, "target": "oldNames2.*.oldName", "value": "{{ $values.name }}" }
+                    ]
+                },
+                {
+                    "label": "年龄",
+                    "component": "InputNumber",
+                    "designKey": "form-3gyJ",
+                    "name": "age",
+                    "props": { "step": 1, "precision": 0 },
+                    "hideLabel": false,
+                    "change": [
+                        {
+                            "expand": true,
+                            "target": "base",
+                            "value": "{{  '姓名：' + $values.name + '年龄：' + $values.age  }}"
+                        }
+                    ]
+                },
+                {
+                    "label": "婚姻情况",
+                    "component": "Radio",
+                    "props": {
+                        "mode": "static",
+                        "options": [
+                            { "label": "已婚", "value": "0" },
+                            { "label": "未婚", "value": "1" }
+                        ],
+                        "labelKey": "label",
+                        "valueKey": "value",
+                        "optionType": "circle",
+                        "direction": "horizontal",
+                        "space": 20,
+                        "disabled": "{{ $values.age < 20 }}"
+                    },
+                    "designKey": "form-1DkH",
+                    "name": "marry",
+                    "change": [
+                        { "expand": true, "target": "base", "value": "{{ $selectData?.marry?.label }}" },
+                        { "expand": true, "target": "arr", "value": "{{ JSON.stringify($selectData) }}" }
+                    ]
+                },
+                {
+                    "label": "爱好",
+                    "component": "Select",
+                    "props": {
+                        "mode": "local",
+                        "placeholder": "请选择",
+                        "labelKey": "label",
+                        "valueKey": "value",
+                        "localOptions": "{{ hobbyOptions }}"
+                    },
+                    "designKey": "form-HMue",
+                    "name": "like",
+                    "hideLabel": false,
+                    "change": [{ "expand": true, "target": "arr", "value": "{{ JSON.stringify($selectData) }}" }]
+                }
+            ],
+            "props": { "columns": 2, "column-gap": 100, "row-gap": 20, "class": "mb4" },
+            "designKey": "form-huLG",
+            "name": "evyn6D"
+        },
+        {
+            "label": "已选择数据",
+            "component": "Textarea",
+            "props": { "minRows": 1, "maxRows": 4, "placeholder": "请输入", "disabled": true, "class": "" },
+            "designKey": "form-n9EG",
+            "name": "arr"
+        },
+        {
+            "label": "基本情况",
+            "component": "Textarea",
+            "props": { "minRows": 1, "maxRows": 4, "placeholder": "请输入", "disabled": true },
+            "designKey": "form-bK6h",
+            "name": "base",
+            "change": []
+        },
+        {
+            "label": "曾用名",
+            "component": "FormList",
+            "showChange": false,
+            "children": [
+                {
+                    "label": "名字",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-bB0d",
+                    "name": "oldName",
+                    "labelAlign": "top",
+                    "change": [{ "expand": true, "target": "length", "value": "{{ $item.oldName?.length || 'sss' }}" }]
+                },
+                {
+                    "label": "名字长度",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-E7TO",
+                    "name": "length",
+                    "labelAlign": "top"
+                }
+            ],
+            "props": { "mode": "inline", "maxLines": 999, "class": "", "allowAdd": true, "needFirst": true },
+            "designKey": "form-iiA8",
+            "name": "oldNames",
+            "hideLabel": false,
+            "hidden": false,
+            "labelAlign": "left"
+        },
+        {
+            "label": "曾用名",
+            "component": "FormList",
+            "showChange": false,
+            "children": [
+                {
+                    "label": "名字",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-Dgb0",
+                    "name": "oldName",
+                    "labelAlign": "top",
+                    "change": [{ "expand": true, "target": "length", "value": "{{ $item.oldName?.length || 'sss' }}" }]
+                },
+                {
+                    "label": "名字长度",
+                    "component": "Input",
+                    "props": { "placeholder": "请输入文本" },
+                    "designKey": "form-34KW",
+                    "name": "length",
+                    "labelAlign": "top"
+                }
+            ],
+            "props": { "mode": "table", "maxLines": 999, "class": "", "allowAdd": true, "needFirst": true },
+            "designKey": "form-Iv4E",
+            "name": "oldNames2",
+            "hideLabel": false,
+            "hidden": false,
+            "labelAlign": "left"
+        }
+    ],
+    "labelWidth": "90px",
+    "labelSuffix": "",
+    "labelAlign": "top",
+    "size": "default"
+}

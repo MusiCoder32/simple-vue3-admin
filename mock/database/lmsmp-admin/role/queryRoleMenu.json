@@ -1,0 +1,218 @@
+{
+    "code": "200",
+    "message": "成功",
+    "data": {
+        "roleId": "202956369817071616",
+        "menuList": [
+            {
+                "id": "189957733380317184",
+                "pid": null,
+                "route": "/init",
+                "icon": "init",
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:35:07",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 2,
+                "name": "项目立项",
+                "isChecked": null
+            },
+
+            {
+                "id": "223956359135444992",
+                "pid": null,
+                "route": "/project-link",
+                "icon": "link",
+                "type": "MENU",
+                "creator": "admin",
+                "createTime": "2024-10-11 10:13:31",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 10,
+                "name": "关联项目管理",
+                "isChecked": null
+            },
+            {
+                "id": "227955614081302528",
+                "pid": null,
+                "route": "/secrecy",
+                "icon": "secrecy",
+                "type": "MENU",
+                "creator": "编号89757",
+                "createTime": "2024-10-22 11:05:08",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 11,
+                "name": "保密项目管理",
+                "isChecked": null
+            },
+
+            {
+                "id": "189961832096129024",
+                "pid": null,
+                "route": "/background",
+                "icon": "background",
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:51:24",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 15,
+                "name": "后台管理",
+                "isChecked": null
+            },
+
+            {
+                "id": "197858065722114048",
+                "pid": null,
+                "route": "/system",
+                "icon": "system-manage",
+                "type": "MENU",
+                "creator": "编号89757",
+                "createTime": "2024-07-31 09:48:13",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 17,
+                "name": "系统管理",
+                "isChecked": null
+            },
+
+            {
+                "id": "189957858412519424",
+                "pid": "189957733380317184",
+                "route": "/init/create",
+                "icon": null,
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:35:37",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 23,
+                "name": "立项创建",
+                "isChecked": null
+            },
+            {
+                "id": "189958262340771840",
+                "pid": "189957733380317184",
+                "route": "/init/confirm",
+                "icon": null,
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:37:13",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 24,
+                "name": "立项确认",
+                "isChecked": null
+            },
+
+            {
+                "id": "189959868394299392",
+                "pid": "189959695777718272",
+                "route": "/evaluate/pre-approval",
+                "icon": null,
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:43:36",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 30,
+                "name": "审批预审管理",
+                "isChecked": null
+            },
+
+            {
+                "id": "189961894830333952",
+                "pid": "189961832096129024",
+                "route": "/background/authority",
+                "icon": null,
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:51:39",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 60,
+                "name": "权限管理",
+                "isChecked": null
+            },
+            {
+                "id": "197858846328225792",
+                "pid": "197858065722114048",
+                "route": "/system/menus",
+                "icon": null,
+                "type": "MENU",
+                "creator": "编号89757",
+                "createTime": "2024-07-31 09:51:19",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 62,
+                "name": "菜单权限管理",
+                "isChecked": null
+            },
+
+            {
+                "id": "189961929143934976",
+                "pid": "189961894830333952",
+                "route": "/background/authority/roles",
+                "icon": null,
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:51:48",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 143,
+                "name": "角色管理",
+                "isChecked": null
+            },
+            {
+                "id": "189961954276204544",
+                "pid": "189961894830333952",
+                "route": "/background/authority/users",
+                "icon": null,
+                "type": "MENU",
+                "creator": null,
+                "createTime": "2024-07-09 14:51:54",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 144,
+                "name": "用户管理",
+                "isChecked": null
+            },
+            {
+                "id": "291365155396382720",
+                "pid": "189961894830333952",
+                "route": "/background/authority/network",
+                "icon": null,
+                "type": "MENU",
+                "creator": "admin",
+                "createTime": "2025-04-15 10:32:01",
+                "modifier": "admin",
+                "modifyTime": "2025-07-01 10:20:59",
+                "dr": 0,
+                "sortNum": 145,
+                "name": "权限申请",
+                "isChecked": null
+            }
+        ],
+        "roleMenuFileViewDTO": {
+            "projectView": "1",
+            "secretProjectView": "0",
+            "projectAttachmentView": "1",
+            "fileView": "0"
+        }
+    },
+    "traceId": "58c60c06ba5f4a2ab325a82d226f4cf3"
+}

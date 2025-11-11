@@ -1,0 +1,17 @@
+{
+    "code": "200",
+    "message": "成功",
+    "data": {
+        "id": "20020291",
+        "staffCode": "20020291",
+        "name": "11",
+        "ownerCom": "NB Plus",
+        "orgGroupName": "汽车事业群",
+        "orgName": "第十一事业部",
+        "deptName": null,
+        "email": "caiyw5@yonyou.com",
+        "costCenterCode": "10001109",
+        "onjobStatus": "在职"
+    },
+    "traceId": "fe317aa8ad514e33af04aea0c5b339de"
+}

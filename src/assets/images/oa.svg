@@ -1,0 +1,32 @@
+<svg width="44.000000" height="44.000000" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_2763_34530_dd" x="-4.000000" y="-4.000000" width="52.000000" height="52.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="3.33333"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.86275 0 0 0 0 0.34118 0 0 0 0.4 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<clipPath id="clip2763_34533">
+			<rect id="广告投放" rx="22.000000" width="44.000000" height="44.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="22.000000" y1="6.000000" x2="22.000000" y2="38.000000" id="paint_linear_2763_34530_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#AFEEA5"/>
+			<stop offset="1.000000" stop-color="#40DC57"/>
+		</linearGradient>
+	</defs>
+	<rect id="广告投放" rx="22.000000" width="44.000000" height="44.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip2763_34533)">
+		<g filter="url(#filter_2763_34530_dd)">
+			<rect id="矩形 1855" x="6.000000" y="6.000000" rx="16.000000" width="32.000000" height="32.000000" fill="url(#paint_linear_2763_34530_0)" fill-opacity="1.000000"/>
+			<rect id="矩形 1855" x="6.500000" y="6.500000" rx="15.500000" width="31.000000" height="31.000000" stroke="#707070" stroke-opacity="0" stroke-width="1.000000"/>
+		</g>
+		<path id="path" d="M30 18L14 18L14 15.6C14 15.54 14 15.49 14.01 15.44C14.02 15.39 14.04 15.34 14.06 15.29C14.08 15.24 14.1 15.19 14.13 15.15C14.16 15.11 14.19 15.07 14.23 15.03C14.27 14.99 14.31 14.96 14.35 14.93C14.39 14.9 14.44 14.88 14.49 14.86C14.54 14.84 14.59 14.82 14.64 14.81C14.69 14.8 14.74 14.8 14.8 14.8L29.2 14.8C29.25 14.8 29.3 14.8 29.35 14.81C29.4 14.82 29.45 14.84 29.5 14.86C29.55 14.88 29.6 14.9 29.64 14.93C29.68 14.96 29.72 14.99 29.76 15.03C29.8 15.07 29.83 15.11 29.86 15.15C29.89 15.19 29.91 15.24 29.93 15.29C29.95 15.34 29.97 15.39 29.98 15.44C29.99 15.49 30 15.54 30 15.6L30 18ZM30 19.6L30 28.4C30 28.45 29.99 28.5 29.98 28.55C29.97 28.6 29.95 28.65 29.93 28.7C29.91 28.75 29.89 28.8 29.86 28.84C29.83 28.88 29.8 28.92 29.76 28.96C29.72 29 29.68 29.03 29.64 29.06C29.6 29.09 29.55 29.11 29.5 29.13C29.45 29.15 29.4 29.17 29.35 29.18C29.3 29.19 29.25 29.2 29.2 29.2L14.8 29.2C14.74 29.2 14.69 29.19 14.64 29.18C14.59 29.17 14.54 29.15 14.49 29.13C14.44 29.11 14.39 29.09 14.35 29.06C14.31 29.03 14.27 29 14.23 28.96C14.19 28.92 14.16 28.88 14.13 28.84C14.1 28.8 14.08 28.75 14.06 28.7C14.04 28.65 14.02 28.6 14.01 28.55C14 28.5 14 28.45 14 28.4L14 19.6L30 19.6ZM21.2 23.6L21.2 21.6L17.6 25.2L26 25.2L26 23.6L21.2 23.6Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

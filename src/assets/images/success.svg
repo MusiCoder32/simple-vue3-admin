@@ -1,0 +1,15 @@
+<svg width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <defs>
+                <clipPath id="clip3751_13574">
+                        <rect id="check-circle-fill (1)" width="14.000000" height="14.000000"
+                                fill="white" fill-opacity="0" />
+                </clipPath>
+        </defs>
+        <g clip-path="url(#clip3751_13574)">
+                <path id="path"
+                        d="M7 0.58C10.54 0.58 13.41 3.45 13.41 7C13.41 10.54 10.54 13.41 7 13.41C3.45 13.41 0.58 10.54 0.58 7C0.58 3.45 3.45 0.58 7 0.58ZM9.83 5.23L10.24 5.64C10.38 5.78 10.38 5.92 10.24 6.06L6.52 9.77C6.39 9.91 6.25 9.91 6.11 9.77L3.98 7.63C3.84 7.5 3.84 7.36 3.98 7.22L4.39 6.81C4.53 6.67 4.66 6.67 4.8 6.81L6.32 8.33L9.41 5.23C9.55 5.09 9.69 5.09 9.83 5.23Z"
+                        fill="#67C23A" fill-opacity="1.000000" fill-rule="evenodd" />
+        </g>
+</svg>

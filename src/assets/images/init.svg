@@ -1,0 +1,10 @@
+<svg width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="clip751_10574">
+			<rect id="folder" width="18.000000" height="18.000000" fill="white" fill-opacity="0" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip751_10574)" fill="currentColor" fill-opacity="1.000000" fill-rule="evenodd">
+		<path id="path" d="M1.25 3C1.25 2.79 1.32 2.61 1.46 2.46C1.61 2.32 1.79 2.25 2 2.25L8 2.25C8.2 2.25 8.38 2.32 8.53 2.46C8.67 2.61 8.75 2.79 8.75 3L8.75 3.75L15.96 3.75C16.39 3.75 16.75 4.08 16.75 4.5L16.75 15C16.75 15.41 16.39 15.75 15.96 15.75L2.03 15.75C1.6 15.75 1.25 15.41 1.25 15L1.25 3ZM15.25 5.25L2.75 5.25L2.75 14.25L15.25 14.25L15.25 5.25Z" />
+	</g>
+</svg>

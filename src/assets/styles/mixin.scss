@@ -1,0 +1,166 @@
+//颜色定义规范
+$background-color-theme1: #f6f6f7; //背景主题颜色1
+$background-color-theme2: #f5faff; //背景主题颜色2
+$background-color-theme3: #eef7f9; //背景主题颜色3
+
+$font-color-theme1: red; //字体主题颜色1
+$font-color-theme2: #652bf5; //字体主题颜色2
+$font-color-theme3: deepskyblue; //字体主题颜色3
+
+$primary-blue: #008df9; //主蓝色
+$blue-4: #409eff;
+$primary-black: #303133; //主文本黑色
+$primary-bg: #f0f2f5; //主背景色
+$gray-9: #909399;
+$gray-6: #606266;
+$gray-e: #e6e8eb; //灰色线条颜色
+
+:root {
+    --el-color-primary: #008df9;
+    --el-menu-text-color: #303133;
+    --el-text-color-regular: #303133;
+    --el-input-border-color: #dcdfe6;
+    --el-border-color-light: #e5f1fc;
+    --el-disabled-border-color: #dcdfe6;
+    --el-table-header-text-color: #606266;
+    --el-text-color-secondary: #606266;
+    --el-menu-base-level-padding: 16px;
+}
+
+@mixin font-color($color) {
+    /* 通过该函数设置字体颜色，后期方便统一管理； */
+    color: $color;
+    [data-theme='theme1'] & {
+        color: $font-color-theme1;
+    }
+    [data-theme='theme2'] & {
+        color: $font-color-theme2;
+    }
+    [data-theme='theme3'] & {
+        color: $font-color-theme3;
+    }
+}
+
+@mixin bg-color($color) {
+    /* 通过该函数设置主题颜色，后期方便统一管理； */
+    background-color: $color !important;
+    [data-theme='theme1'] & {
+        background-color: $background-color-theme1 !important;
+    }
+    [data-theme='theme2'] & {
+        background-color: $background-color-theme2 !important;
+    }
+    [data-theme='theme3'] & {
+        background-color: $background-color-theme3 !important;
+    }
+}
+
+@mixin basic-color($text, $fill, $border) {
+    border-radius: 2px;
+    font-size: 12px;
+    display: inline-block;
+    color: $text;
+    background: $fill;
+    padding: 0 9px;
+    height: 24px;
+    line-height: 22px;
+    border: 1px solid $border;
+}
+
+@mixin right-angle-top($color, $size) {
+    background:
+        linear-gradient(135deg, transparent $size, $color 0) top left,
+        linear-gradient(-135deg, transparent $size, $color 0) top right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+//切角边框
+@mixin border-angle($borderColor, $angle, $borderSize, $fillColor) {
+    $angleSqrt: $angle * 1.414;
+    clip-path: polygon(
+        0 $angleSqrt,
+        $angleSqrt 0,
+        calc(100% - #{$angleSqrt}) 0,
+        calc(100% + #{$borderSize}) $angleSqrt,
+        calc(100% + #{$borderSize}) calc(100% - #{$angleSqrt}),
+        calc(100% - #{$angleSqrt}) 100%,
+        $angleSqrt 100%,
+        0 calc(100% - #{$angleSqrt})
+    );
+    background: //处理其他边框
+        linear-gradient(180deg, $borderColor 0px, $borderColor $borderSize, transparent 0) $angle * 1.5 top,
+        linear-gradient(180deg, $borderColor 0px, $borderColor $borderSize, transparent 0) calc(100% - #{$angle * 1.5})
+            top,
+        linear-gradient(0deg, $borderColor 0px, $borderColor $borderSize, transparent 0) calc(100% - #{$angle * 1.5})
+            bottom,
+        linear-gradient(0deg, $borderColor 0px, $borderColor $borderSize, transparent 0) $angle * 1.5 bottom,
+        linear-gradient(180deg, $borderColor 0px, $borderColor $borderSize, transparent 0) $angle * 1.5 0,
+        linear-gradient(270deg, $borderColor 0px, $borderColor $borderSize, transparent 0) right $angle * 1.5,
+        linear-gradient(270deg, $borderColor 0px, $borderColor $borderSize, transparent 0) right
+            calc(100% - #{$angle * 1.5}),
+        linear-gradient(90deg, $borderColor 0px, $borderColor $borderSize, transparent 0) left $angle * 1.5,
+        linear-gradient(90deg, $borderColor 0px, $borderColor $borderSize, transparent 0) left
+            calc(100% - #{$angle * 1.5}),
+        //处理直角边框
+        linear-gradient(
+                135deg,
+                transparent $angle,
+                $borderColor $angle,
+                $borderColor $angle + $borderSize,
+                transparent 0
+            )
+            top left,
+        linear-gradient(
+                -135deg,
+                transparent $angle,
+                $borderColor $angle,
+                $borderColor $angle + $borderSize,
+                transparent 0
+            )
+            top right,
+        linear-gradient(
+                -45deg,
+                transparent $angle,
+                $borderColor $angle,
+                $borderColor $angle + $borderSize,
+                transparent 0
+            )
+            bottom right,
+        linear-gradient(
+                45deg,
+                transparent $angle,
+                $borderColor $angle,
+                $borderColor $angle + $borderSize,
+                transparent 0
+            )
+            bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+//切角填充  先填充后切角边框，子元素始终置于顶层
+//由于内阴影需要裁剪，故将阴影效果放在before,并在before中裁剪,若裁剪放在父元素，会连子元素一同裁剪掉
+@mixin border-angle-fill($borderColor, $angle, $borderSize, $fillColor) {
+    //处理填充内容
+    background:
+        linear-gradient(135deg, transparent $angle, $fillColor 0) top left,
+        linear-gradient(-135deg, transparent $angle, $fillColor 0) top right,
+        linear-gradient(-45deg, transparent $angle, $fillColor 0) bottom right,
+        linear-gradient(45deg, transparent $angle, $fillColor 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+    &:after {
+        content: '';
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include border-angle($borderColor, $angle, $borderSize, $fillColor);
+    }
+}

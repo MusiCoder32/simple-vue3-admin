@@ -1,0 +1,1506 @@
+{
+    "labelWidth": "130px",
+    "labelAlign": "top",
+    "labelSuffix": "",
+    "size": "default",
+    "items": [
+        {
+            "component": "Collapse",
+            "children": [
+                {
+                    "title": "init.createDetail.applyInfo",
+                    "name": "name1",
+                    "children": [
+                        {
+                            "component": "Grid",
+                            "children": [
+                                {
+                                    "label": "init.applyNo",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-3IUh",
+                                    "name": "projectInstId",
+                                    "rules": [{ "expand": true }],
+                                    "hidden": false
+                                },
+                                {
+                                    "label": "init.applyTime",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "on": [{ "expand": true }],
+                                        "readonly": true,
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-03uB",
+                                    "name": "gmtCreate",
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.applicant",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-Evah",
+                                    "name": "creatorName",
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.code",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-V1Nr",
+                                    "name": "creatorId",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.phoneNumber",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "common.inputText",
+                                        "readonly": false,
+                                        "disabled": false,
+                                        "maxlength": 11,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-tRgj",
+                                    "name": "creatorPhone",
+                                    "rules": [
+                                        {
+                                            "type": "^1[3456789]\\d{9}$",
+                                            "message": "message.phoneNumberFormatError",
+                                            "trigger": ["blur"]
+                                        }
+                                    ],
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.email",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-T9Sw",
+                                    "name": "email"
+                                },
+                                {
+                                    "label": "init.createDetail.businessGroup",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-CiEj",
+                                    "name": "orgGroupName",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.division",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-oEtu",
+                                    "name": "orgName"
+                                },
+                                {
+                                    "label": "init.createDetail.dept",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-rysY",
+                                    "name": "deptName"
+                                },
+                                {
+                                    "label": "init.createDetail.costCenter",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-TB2j",
+                                    "name": "costCenterCode"
+                                }
+                            ],
+                            "props": { "columns": 4, "column-gap": 100, "row-gap": 20 },
+                            "designKey": "form-USeD",
+                            "name": "9iJMv7BX"
+                        }
+                    ],
+                    "designKey": "form-qF3q",
+                    "checked": true,
+                    "expand": true,
+                    "has": "{{$formStatus=='library'?'init-applyInfo':''}}",
+                    "hidden": ""
+                },
+                {
+                    "title": "init.createDetail.basicInfo",
+                    "name": "name2",
+                    "children": [
+                        {
+                            "label": "init.projectName",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "maxlength": 100,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-hxjY",
+                            "name": "projectInstName",
+                            "required": true,
+                            "change": [{ "expand": true }]
+                        },
+                        {
+                            "component": "Grid",
+                            "children": [
+                                {
+                                    "label": "init.projectNo",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": false,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-rfed",
+                                    "name": "projectInstCode",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.projectType",
+                                    "component": "cascader",
+                                    "props": {
+                                        "placeholder": "common.selectText",
+                                        "mode": "remote",
+                                        "labelKey": "projectTypeName",
+                                        "valueKey": "projectTypeCode",
+                                        "options": [],
+                                        "api": {
+                                            "method": "GET",
+                                            "url": "/lmsmp-business/project/getProjectTypeList",
+                                            "data": {},
+                                            "params": { "typeLevel": "" },
+                                            "dataPath": {
+                                                "idKey": "projectTypeCode",
+                                                "parentIdKey": "typeParentCode",
+                                                "childrenKey": "children"
+                                            }
+                                        },
+                                        "takeLastLevel": true,
+                                        "on": [{ "expand": true }],
+                                        "filterable": true,
+                                        "clearable": true
+                                    },
+                                    "designKey": "form-6NSi",
+                                    "name": "projectTypeCode",
+                                    "help": "message.projectTypeHelp",
+                                    "required": true
+                                }
+                            ],
+                            "props": { "columns": 2, "column-gap": 100, "row-gap": 20, "class": "mb16" },
+                            "designKey": "form-YskP",
+                            "name": "projectN"
+                        },
+                        {
+                            "label": "init.createDetail.investMethod",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100
+                            },
+                            "designKey": "form-NbvU",
+                            "name": "investMethod",
+                            "required": "{{isRequireInvestMethod($values.projectTypeCode)}}"
+                        },
+                        {
+                            "component": "Grid",
+                            "children": [
+                                {
+                                    "label": "init.createDetail.continent",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "localOptions": "{{   continentOptions  }}",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "api": {
+                                            "method": "GET",
+                                            "url": "/current/query/article",
+                                            "params": {},
+                                            "data": {}
+                                        },
+                                        "on": [{ "expand": true }],
+                                        "filterable": true
+                                    },
+                                    "designKey": "form-PEiu",
+                                    "name": "continentCode",
+                                    "required": true,
+                                    "change": [
+                                        { "expand": true, "target": "country", "value": "" },
+                                        { "expand": true, "target": "countryCode", "value": "{{ null }}" },
+                                        {
+                                            "expand": true,
+                                            "target": "continent",
+                                            "value": "{{$selectData['continentCode']['label']}}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "所属洲中文",
+                                    "component": "Input",
+                                    "props": { "placeholder": "" },
+                                    "designKey": "form-g9b9",
+                                    "name": "continent",
+                                    "hidden": true
+                                },
+                                {
+                                    "label": "init.createDetail.country",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "remote",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "zh",
+                                        "valueKey": "curCode",
+                                        "disabled": false,
+                                        "api": {
+                                            "method": "GET",
+                                            "url": "/lmsmp-business/third/getCountryList",
+                                            "params": { "parentCode": "{{$values.continentCode??''}}" },
+                                            "data": {}
+                                        },
+                                        "on": [{ "expand": true }],
+                                        "filterable": true
+                                    },
+                                    "designKey": "form-lMdE",
+                                    "name": "countryCode",
+                                    "required": true,
+                                    "change": [
+                                        { "expand": true, "target": "province", "value": "{{ null }}" },
+                                        { "expand": true, "target": "provinceCode", "value": "{{ null }}" },
+                                        {
+                                            "expand": true,
+                                            "target": "country",
+                                            "value": "{{$selectData['countryCode']['zh']}}"
+                                        }
+                                    ],
+                                    "hidden": false,
+                                    "help": ""
+                                },
+                                {
+                                    "label": "国家/地区中文",
+                                    "component": "Input",
+                                    "props": { "placeholder": "" },
+                                    "designKey": "form-hW7r",
+                                    "name": "country",
+                                    "hidden": true
+                                },
+                                {
+                                    "label": "init.createDetail.province",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "remote",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "zh",
+                                        "valueKey": "curCode",
+                                        "disabled": false,
+                                        "api": {
+                                            "method": "GET",
+                                            "url": "/lmsmp-business/third/getProvinceList",
+                                            "params": { "parentCode": "{{$values.countryCode}}" },
+                                            "data": {}
+                                        },
+                                        "on": [{ "expand": true }],
+                                        "filterable": true
+                                    },
+                                    "designKey": "form-AOTd",
+                                    "name": "provinceCode",
+                                    "required": "{{$values.countryCode==='CN'}}",
+                                    "change": [
+                                        { "expand": true, "target": "city", "value": "{{ null }}" },
+                                        { "expand": true, "target": "cityCode", "value": "{{ null }}" },
+                                        {
+                                            "expand": true,
+                                            "value": "{{$selectData['provinceCode']['zh']}}",
+                                            "target": "province"
+                                        }
+                                    ],
+                                    "hidden": "{{$values.countryCode!=='CN'}}",
+                                    "help": ""
+                                },
+                                {
+                                    "label": "省份中文",
+                                    "component": "Input",
+                                    "props": { "placeholder": "" },
+                                    "designKey": "form-88D4",
+                                    "name": "province",
+                                    "hidden": true
+                                },
+                                {
+                                    "label": "init.createDetail.city",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "remote",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "zh",
+                                        "valueKey": "curCode",
+                                        "disabled": false,
+                                        "api": {
+                                            "method": "GET",
+                                            "url": "/lmsmp-business/third/getCityList",
+                                            "params": { "parentCode": "{{$values.provinceCode??''}}" },
+                                            "data": {}
+                                        },
+                                        "on": [{ "expand": true }],
+                                        "filterable": true
+                                    },
+                                    "designKey": "form-pXI6",
+                                    "name": "cityCode",
+                                    "required": "{{$values.countryCode==='CN'}}",
+                                    "change": [
+                                        {
+                                            "expand": true,
+                                            "value": "{{$selectData['cityCode']['zh']}}",
+                                            "target": "city"
+                                        }
+                                    ],
+                                    "hidden": "{{$values.countryCode!=='CN'}}",
+                                    "help": ""
+                                },
+                                {
+                                    "label": "城市中文",
+                                    "component": "Input",
+                                    "props": { "placeholder": "" },
+                                    "designKey": "form-6F9i",
+                                    "name": "city",
+                                    "hidden": true
+                                },
+                                {
+                                    "label": "init.createDetail.relatedProject",
+                                    "component": "Radio",
+                                    "props": {
+                                        "mode": "local",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "optionType": "circle",
+                                        "direction": "horizontal",
+                                        "space": 20,
+                                        "localOptions": "{{ withOrWithoutOptions }}",
+                                        "on": [{ "expand": true }],
+                                        "api": {
+                                            "method": "GET",
+                                            "url": "/current/query/article",
+                                            "params": {},
+                                            "data": {}
+                                        }
+                                    },
+                                    "designKey": "form-gF83",
+                                    "name": "isRelate",
+                                    "required": true,
+                                    "help": "",
+                                    "hidden": false,
+                                    "initialValue": "0"
+                                },
+                                {
+                                    "component": "ButtonForm",
+                                    "props": {
+                                        "name": "sfdasdfasdf",
+                                        "type": "primary",
+                                        "clickEvent": "custom",
+                                        "category": 2,
+                                        "customEvent": "{{()=>openAssociate($values.associate)}}",
+                                        "buttonLabel": "common.clickView",
+                                        "class": "pl12"
+                                    },
+                                    "designKey": "form-vuxT",
+                                    "name": "associateArray",
+                                    "label": "init.createDetail.associateTitle",
+                                    "hideLabel": false,
+                                    "required": true,
+                                    "class": "no-print",
+                                    "hidden": "{{($formStatus !== 'approvalView'  && $formStatus !== 'view') || $values.isRelate == '0'}}"
+                                }
+                            ],
+                            "props": { "columns": 2, "column-gap": 100, "row-gap": 20, "class": "mb20" },
+                            "designKey": "form-Hx2v",
+                            "name": "w902wQ"
+                        },
+                        {
+                            "label": "init.createDetail.relatedInfo",
+                            "component": "FormList",
+                            "children": [
+                                {
+                                    "label": "init.createDetail.associateCode",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "common.selectText",
+                                        "suffixIcon": "ArrowDown",
+                                        "on": [{ "eventType": "click", "eventName": "relateProject", "expand": true }],
+                                        "class": "",
+                                        "readonly": true
+                                    },
+                                    "designKey": "form-46x9",
+                                    "name": "relateProjectCode",
+                                    "required": true,
+                                    "change": [{ "expand": true }],
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.associate",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "localOptions": "{{ associateOptions }}",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-4o1z",
+                                    "name": "relateCondition",
+                                    "required": true,
+                                    "change": [{ "expand": true }]
+                                }
+                            ],
+                            "props": {
+                                "mode": "inline",
+                                "showChange": false,
+                                "operations": [{ "expand": true }],
+                                "needFirst": true
+                            },
+                            "designKey": "form-ktBE",
+                            "name": "ProjectRelateDO",
+                            "hidden": "{{ !$values.isRelate  || $values.isRelate == '0' || $formStatus == 'view' || $formStatus == 'approvalView'}}",
+                            "hideLabel": true,
+                            "required": false
+                        },
+                        {
+                            "label": "init.createDetail.relatedInfo",
+                            "component": "FormList",
+                            "children": [
+                                {
+                                    "label": "init.createDetail.associateCode",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "common.selectText",
+                                        "suffixIcon": "ArrowDown",
+                                        "readonly": true
+                                    },
+                                    "designKey": "form-EGpI",
+                                    "name": "relateProjectCode",
+                                    "required": true,
+                                    "labelAlign": "top"
+                                },
+                                {
+                                    "label": "init.createDetail.associate",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "localOptions": "{{ associateOptions }}",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "label",
+                                        "valueKey": "value"
+                                    },
+                                    "designKey": "form-RgUv",
+                                    "name": "relateCondition",
+                                    "required": true,
+                                    "labelAlign": "top"
+                                }
+                            ],
+                            "props": { "mode": "inline", "showChange": false },
+                            "designKey": "form-sCah",
+                            "name": "ProjectRelateDO",
+                            "hideLabel": true,
+                            "class": "only-print",
+                            "required": false,
+                            "labelAlign": "top",
+                            "hidden": "{{$values.isRelate == '0'}}"
+                        },
+                        {
+                            "label": "init.createDetail.projectDescribe",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-kZjS",
+                            "name": "projectInstDescribe",
+                            "required": true
+                        },
+                        {
+                            "component": "Grid",
+                            "children": [
+                                {
+                                    "label": "ourPart.ourPart",
+                                    "component": "Select",
+                                    "props": {
+                                        "placeholder": "common.selectText",
+                                        "on": [{ "eventType": "click", "eventName": "selectOurPart", "expand": true }],
+                                        "multiple": true,
+                                        "labelKey": "",
+                                        "valueKey": "",
+                                        "mode": "static"
+                                    },
+                                    "designKey": "form-FlD1",
+                                    "name": "corpnList",
+                                    "required": true,
+                                    "rules": [],
+                                    "hidden": false,
+                                    "help": ""
+                                },
+                                {
+                                    "label": "otherPart.otherPart",
+                                    "component": "Select",
+                                    "props": {
+                                        "placeholder": "common.selectText",
+                                        "on": [
+                                            { "eventType": "click", "eventName": "selectOtherPart", "expand": true }
+                                        ],
+                                        "multiple": true
+                                    },
+                                    "designKey": "form-PXkt",
+                                    "name": "counterpartList",
+                                    "required": true,
+                                    "rules": []
+                                },
+                                {
+                                    "label": "init.createDetail.xmtzly",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "on": [{ "expand": true }],
+                                        "showOtherOption": true,
+                                        "api": {},
+                                        "localOptions": "{{   projectInvestOptions  }}"
+                                    },
+                                    "designKey": "form-q9mu",
+                                    "name": "xmtzly",
+                                    "required": true,
+                                    "hidden": "{{isShowInvestField($values.projectTypeCode)}}",
+                                    "change": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.xmjl",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "common.selectText",
+                                        "suffixIcon": "ArrowDown",
+                                        "on": [
+                                            {
+                                                "expand": true,
+                                                "eventType": "click",
+                                                "eventName": "selectProjectManager"
+                                            }
+                                        ],
+                                        "readonly": true
+                                    },
+                                    "designKey": "form-3inm",
+                                    "name": "xmjl",
+                                    "required": true,
+                                    "hidden": "{{isShowProjectManager($values.projectTypeCode)}}"
+                                }
+                            ],
+                            "props": { "columns": 2, "column-gap": 100, "row-gap": 20, "class": "mb16" },
+                            "designKey": "form-BSQn",
+                            "name": "8Tlu30ul"
+                        },
+                        {
+                            "label": "init.createDetail.xmxq",
+                            "component": "Select",
+                            "props": {
+                                "mode": "local",
+                                "localOptions": "{{ xmxqOptions }}",
+                                "placeholder": "common.selectText",
+                                "labelKey": "label",
+                                "valueKey": "value",
+                                "on": [{ "expand": true }],
+                                "multiple": true,
+                                "allowCreate": true,
+                                "filterable": true,
+                                "showOtherOption": true
+                            },
+                            "designKey": "form-2q3w",
+                            "name": "xmxq",
+                            "required": true
+                        },
+                        {
+                            "label": "init.createDetail.xmly",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100
+                            },
+                            "designKey": "form-4Ak1",
+                            "name": "xmly",
+                            "required": true,
+                            "hidden": "{{isShowProjectManager($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.xmzqyjh",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-Acto",
+                            "name": "xmzqyjh"
+                        },
+                        {
+                            "label": "init.createDetail.kjywtms",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-Gh2m",
+                            "name": "kjywtms"
+                        },
+                        {
+                            "label": "init.createDetail.yyyj",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-lqvR",
+                            "name": "yyyj",
+                            "hidden": "{{isShowYyyj($values.projectTypeCode)}}",
+                            "required": true
+                        },
+                        {
+                            "label": "init.createDetail.qtxmxxbz",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-bPLX",
+                            "name": "qtxmxxbz"
+                        }
+                    ],
+                    "designKey": "form-cozk",
+                    "checked": true,
+                    "expand": true,
+                    "has": "{{$formStatus=='library'?'init-baseInfo':''}}",
+                    "class": ""
+                },
+                {
+                    "title": "init.createDetail.coreBusinessInfo",
+                    "name": "name3",
+                    "children": [
+                        {
+                            "component": "Grid",
+                            "children": [
+                                {
+                                    "label": "init.createDetail.xmjeyb",
+                                    "component": "InputNumber",
+                                    "designKey": "form-zGk7",
+                                    "name": "xmjeyb",
+                                    "props": {
+                                        "on": [{ "expand": true }],
+                                        "step": 0.01,
+                                        "min": 0,
+                                        "unit": "",
+                                        "precision": 2
+                                    },
+                                    "required": true,
+                                    "change": [
+                                        {
+                                            "target": "xmjermb",
+                                            "value": "{{ $values?.xmjeyb !== '***' && $values?.xmjeyb !== undefined && $values?.xmjeyb !== null && $values?.exchangeRate !== undefined && $values?.exchangeRate !== null ? ($values?.xmjeyb * $values?.exchangeRate).toFixed(2) : $values.xmjermb }}",
+                                            "expand": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "init.createDetail.bb",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "remote",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "currencyName",
+                                        "valueKey": "currencyCode",
+                                        "on": [{ "expand": true, "eventType": "change", "eventName": "bzChange" }],
+                                        "api": {
+                                            "method": "GET",
+                                            "dataPath": { "idKey": "id", "parentIdKey": "parentId" },
+                                            "url": "/lmsmp-business/sap/queryCurrency",
+                                            "data": {},
+                                            "params": {}
+                                        },
+                                        "filterable": true
+                                    },
+                                    "designKey": "form-QdS7",
+                                    "name": "bb",
+                                    "required": true
+                                },
+                                {
+                                    "label": "init.createDetail.xmjermb",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-8oHa",
+                                    "name": "xmjermb",
+                                    "help": "",
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.exchangeRate",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "disabled": true,
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "change": [
+                                        {
+                                            "target": "xmjermb",
+                                            "value": "{{ $values?.xmjeyb !== '***' && $values?.xmjeyb !== undefined && $values?.xmjeyb !== null && $values?.exchangeRate !== undefined && $values?.exchangeRate !== null ? ($values?.xmjeyb * $values?.exchangeRate).toFixed(2) : $values.xmjermb }}",
+                                            "expand": true
+                                        },
+                                        {
+                                            "target": "tdjgrmb",
+                                            "value": "{{ $values?.tdjgyb !== '***' && $values?.tdjgyb !== undefined && $values?.tdjgyb !== null && $values?.exchangeRate !== undefined && $values?.exchangeRate !== null ? ($values?.tdjgyb * $values?.exchangeRate).toFixed(2) : $values.tdjgrmb }}",
+                                            "expand": true
+                                        }
+                                    ],
+                                    "designKey": "form-ogKz",
+                                    "name": "exchangeRate",
+                                    "help": "message.exchangeRateHelp",
+                                    "rules": [{ "expand": true }]
+                                },
+                                {
+                                    "label": "init.createDetail.sffx",
+                                    "component": "Select",
+                                    "props": {
+                                        "mode": "local",
+                                        "localOptions": "{{ sffxOptions }}",
+                                        "placeholder": "common.selectText",
+                                        "labelKey": "label",
+                                        "valueKey": "value",
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-9p6a",
+                                    "name": "sffx",
+                                    "required": true,
+                                    "change": [
+                                        {
+                                            "target": "rmb",
+                                            "value": "{{($values.moneyType??0) * ($values.originMoney??0)}}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "init.createDetail.gqbl",
+                                    "component": "InputNumber",
+                                    "designKey": "form-Oy49",
+                                    "name": "gqbl",
+                                    "props": {
+                                        "on": [{ "expand": true }],
+                                        "precision": 2,
+                                        "step": 0.01,
+                                        "max": 100,
+                                        "min": 0
+                                    },
+                                    "hidden": "{{isShowGqbl($values.projectTypeCode)}}",
+                                    "required": true
+                                },
+                                {
+                                    "label": "init.createDetail.tdjgyb",
+                                    "component": "InputNumber",
+                                    "designKey": "form-NCmS",
+                                    "name": "tdjgyb",
+                                    "props": {
+                                        "on": [{ "expand": true }],
+                                        "step": 0.01,
+                                        "min": 1,
+                                        "unit": "",
+                                        "precision": 2
+                                    },
+                                    "required": true,
+                                    "hidden": "{{isShowTdz($values.projectTypeCode)}}",
+                                    "change": [
+                                        {
+                                            "target": "tdjgrmb",
+                                            "value": "{{ $values?.tdjgyb !== '***' && $values?.tdjgyb !== undefined && $values?.tdjgyb !== null && $values?.exchangeRate !== undefined && $values?.exchangeRate !== null ? ($values?.tdjgyb * $values?.exchangeRate).toFixed(2) : $values.tdjgrmb }}",
+                                            "expand": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "init.createDetail.tdjgrmb",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "disabled": true
+                                    },
+                                    "designKey": "form-jk6E",
+                                    "hidden": "{{isShowTdz($values.projectTypeCode)}}",
+                                    "name": "tdjgrmb",
+                                    "help": "",
+                                    "rules": [{ "expand": true }]
+                                }
+                            ],
+                            "props": { "columns": 2, "column-gap": 100, "row-gap": 20, "class": "mb16" },
+                            "designKey": "form-yAKn",
+                            "name": "B9pyr5"
+                        },
+                        {
+                            "label": "init.createDetail.jebz",
+                            "component": "Textarea",
+                            "props": {
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100,
+                                "minRows": 2,
+                                "maxRows": 2
+                            },
+                            "designKey": "form-OGVm",
+                            "name": "jebz",
+                            "required": "{{$values.sffx == '收款+付款'}}",
+                            "help": "message.jebzHelp",
+                            "rules": [{ "expand": true }]
+                        },
+                        {
+                            "label": "init.createDetail.wfwpryzw",
+                            "component": "Textarea",
+                            "props": {
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100,
+                                "minRows": 2,
+                                "maxRows": 2
+                            },
+                            "designKey": "form-Jrpy",
+                            "name": "wfwpryzw",
+                            "required": true,
+                            "hidden": "{{investBoolean($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.gdhdshbjjz",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 5000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-Phvs",
+                            "name": "gdhdshbjjz",
+                            "help": "",
+                            "hidden": "{{investBoolean($values.projectTypeCode)}}",
+                            "required": true
+                        },
+                        {
+                            "label": "init.createDetail.sfktj",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 5000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-9ygn",
+                            "name": "sfktj",
+                            "help": "",
+                            "required": true
+                        },
+                        {
+                            "label": "init.createDetail.jgtj",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 5000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-QjUC",
+                            "name": "jgtj",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowJgtj($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tcjz",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 5000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-3ScZ",
+                            "name": "tcjz",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowTcjz($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.cncz",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-7WOE",
+                            "name": "cncz",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowCncz($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.jszq",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-UVar",
+                            "name": "jszq",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowJszq($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tdmj",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100
+                            },
+                            "designKey": "form-yk62",
+                            "name": "tdmj",
+                            "required": true,
+                            "hidden": "{{isShowTdmj($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tdxz",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100
+                            },
+                            "designKey": "form-Sb5E",
+                            "name": "tdxz",
+                            "required": true,
+                            "hidden": "{{isShowTdxz($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.jjfs",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100
+                            },
+                            "designKey": "form-15sc",
+                            "name": "jjfs",
+                            "required": true,
+                            "hidden": "{{isShowJjfs($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.xmgcfw",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-bujD",
+                            "name": "xmgcfw",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowXmgcfw($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tdqlfd",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-fP2m",
+                            "name": "tdqlfd",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowTdqlfd($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tdz",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 2,
+                                "maxRows": 2,
+                                "placeholder": "common.inputText",
+                                "on": [{ "expand": true }],
+                                "maxlength": 100
+                            },
+                            "designKey": "form-POuS",
+                            "name": "tdz",
+                            "required": true,
+                            "hidden": "{{isShowTdz($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tdqs",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-rLJs",
+                            "name": "tdqs",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowTdqs($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.qttdqk",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-sc05",
+                            "name": "qttdqk",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowQttdqk($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.fczjbftj",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-7QiD",
+                            "name": "fczjbftj",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowFczjbftj($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.sscn",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-F28f",
+                            "name": "sscn",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowsscn($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.bdhyq",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-Q7Xe",
+                            "name": "bdhyq",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowbdhyq($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.tzyhdy",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-HkKX",
+                            "name": "tzyhdy",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowbdhyq($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.btfsjed",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-o3aM",
+                            "name": "btfsjed",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowbdhyq($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.jssgms",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 2000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-ISni",
+                            "name": "jssgms",
+                            "help": "",
+                            "required": true,
+                            "hidden": "{{isShowjssgms($values.projectTypeCode)}}"
+                        },
+                        {
+                            "label": "init.createDetail.qt",
+                            "component": "Textarea",
+                            "props": {
+                                "minRows": 4,
+                                "maxRows": 4,
+                                "placeholder": "common.inputText",
+                                "maxlength": 5000,
+                                "on": [{ "expand": true }]
+                            },
+                            "designKey": "form-j71K",
+                            "name": "qt",
+                            "help": "",
+                            "required": false
+                        }
+                    ],
+                    "designKey": "form-w8MA",
+                    "checked": true,
+                    "expand": true,
+                    "has": "{{$formStatus=='library'?'init-coreBusinessCondict':''}}"
+                },
+                {
+                    "title": "attachments.attachments",
+                    "name": "name4",
+                    "children": [
+                        {
+                            "label": "attachments.fileUpload",
+                            "component": "Upload",
+                            "props": {
+                                "uploadKey": "fileArr",
+                                "action": "https://hyl999.co/api/upload/image",
+                                "size": 1024,
+                                "buttonText": "attachments.clickUpload",
+                                "limit": 999,
+                                "showFileList": true,
+                                "on": [{ "eventType": "uploadSuccess", "eventName": "uploadSuccess" }]
+                            },
+                            "designKey": "form-mQgg",
+                            "name": "iU8FSD",
+                            "hideLabel": true,
+                            "hidden": "{{$formStatus !== 'edit' && $formStatus !== 'add'}}"
+                        },
+                        {
+                            "label": "自增容器",
+                            "component": "FormList",
+                            "children": [
+                                {
+                                    "label": "attachments.projectStep",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "disabled": false,
+                                        "class": "form-readonly ",
+                                        "on": [{ "expand": true }],
+                                        "readonly": true
+                                    },
+                                    "designKey": "form-mz1V",
+                                    "name": "flowBlockName",
+                                    "initialValue": "",
+                                    "help": "",
+                                    "rules": [{ "expand": true }],
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "attachments.fileName",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "disabled": false,
+                                        "class": "form-readonly ",
+                                        "on": [{ "expand": true }],
+                                        "readonly": true,
+                                        "ellipsis": true
+                                    },
+                                    "designKey": "form-0KOU",
+                                    "name": "fileName",
+                                    "rules": [{ "expand": true }],
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "attachments.uploader",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "disabled": false,
+                                        "class": "form-readonly ",
+                                        "on": [{ "expand": true }],
+                                        "readonly": true
+                                    },
+                                    "designKey": "form-DTGv",
+                                    "name": "creatorName",
+                                    "initialValue": "{{ $values.creatorName }}",
+                                    "rules": [{ "expand": true }],
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "attachments.uploadTime",
+                                    "component": "DatePicker",
+                                    "props": {
+                                        "type": "datetime",
+                                        "placeholder": "",
+                                        "clearable": false,
+                                        "readonly": true,
+                                        "disabled": false,
+                                        "class": "form-readonly ",
+                                        "on": [{ "expand": true }]
+                                    },
+                                    "designKey": "form-XM6i",
+                                    "name": "gmtCreate",
+                                    "initialValue": "",
+                                    "class": "form-readonly"
+                                }
+                            ],
+                            "props": {
+                                "mode": "table",
+                                "showIndex": true,
+                                "operations": [
+                                    {
+                                        "buttonName": "common.delete",
+                                        "buttonEvent": "fileDel",
+                                        "expand": true,
+                                        "hidden": "{{$formStatus==='view' || $formStatus == 'approvalView' || $formStatus == 'library'}}"
+                                    },
+                                    { "expand": true, "buttonName": "common.view", "buttonEvent": "fileView" }
+                                ],
+                                "showChange": false,
+                                "allowAdd": false,
+                                "showPage": false
+                            },
+                            "designKey": "form-UXZ9",
+                            "name": "fileArr",
+                            "hideLabel": true,
+                            "showChange": false
+                        }
+                    ],
+                    "checked": true,
+                    "designKey": "form-hqpG",
+                    "expand": true,
+                    "has": "{{$formStatus=='library'?'init-file':''}}"
+                },
+                {
+                    "title": "init.createDetail.initApprovalRecord",
+                    "checked": true,
+                    "children": [
+                        {
+                            "component": "Button",
+                            "props": {
+                                "name": "common.oaView",
+                                "type": "primary",
+                                "clickEvent": "custom",
+                                "customEvent": "{{handleOaView}}",
+                                "category": 1,
+                                "class": "mb12 no-print"
+                            },
+                            "designKey": "form-S28A",
+                            "name": "Q9bWaV",
+                            "hidden": "{{ ['BUSINESS','INVESTMENT'].includes($values.dataSourcePlatform)|| $formStatus != 'view'}}"
+                        },
+                        {
+                            "label": "自增容器",
+                            "component": "FormList",
+                            "showChange": false,
+                            "children": [
+                                {
+                                    "label": "approvalRecord.platform",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "readonly": true, "on": [{ "expand": true }] },
+                                    "designKey": "form-0a3J",
+                                    "name": "flowPlatform",
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "approvalRecord.node",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "readonly": true, "on": [{ "expand": true }] },
+                                    "designKey": "form-LejH",
+                                    "name": "apprNodeName",
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "approvalRecord.approver",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "readonly": true, "on": [{ "expand": true }] },
+                                    "designKey": "form-74Lw",
+                                    "name": "approveDealName",
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "approvalRecord.approverDept",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "ellipsis": true
+                                    },
+                                    "designKey": "form-0WRl",
+                                    "name": "approveDealDeptName",
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "approvalRecord.approveTime",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "on": [{ "expand": true }] },
+                                    "designKey": "form-KsKe",
+                                    "name": "approveDealTime",
+                                    "rules": [{ "expand": true }],
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "approvalRecord.operation",
+                                    "component": "Input",
+                                    "props": { "placeholder": "", "readonly": true, "on": [{ "expand": true }] },
+                                    "designKey": "form-Rltn",
+                                    "name": "flowApproveOpt",
+                                    "class": "form-readonly"
+                                },
+                                {
+                                    "label": "approvalRecord.suggestion",
+                                    "component": "Input",
+                                    "props": {
+                                        "placeholder": "",
+                                        "readonly": true,
+                                        "on": [{ "expand": true }],
+                                        "ellipsis": true
+                                    },
+                                    "designKey": "form-JIsD",
+                                    "name": "comments",
+                                    "class": "form-readonly"
+                                }
+                            ],
+                            "props": { "mode": "table", "allowAdd": false, "showIndex": false },
+                            "designKey": "form-CtVq",
+                            "name": "approveRecordArr",
+                            "hideLabel": true,
+                            "hidden": false
+                        }
+                    ],
+                    "designKey": "form-CMja",
+                    "name": "name5",
+                    "hidden": "",
+                    "expand": true,
+                    "has": "{{$formStatus=='library'?'initApprovalRecord':''}}"
+                }
+            ],
+            "designKey": "form-7uSr",
+            "name": "smcgk9"
+        }
+    ],
+    "name": "",
+    "hideRequiredAsterisk": false
+}
