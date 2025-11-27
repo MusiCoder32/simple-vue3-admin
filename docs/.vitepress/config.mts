@@ -1,6 +1,7 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import llms from 'vitepress-plugin-llms'
 
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -22,7 +23,7 @@ const utilsUrl = path.resolve(import.meta.dirname, '../../src/utils/index.ts')
 export default defineConfig((envObj) => {
     const { mode, command } = envObj
     return {
-        // srcDir: 'docs',
+  
         lang: 'zh-cn',
         head: [['link', { rel: 'icon', type: 'image/png', href: '/vite.png' }]],
         themeConfig: {
@@ -56,6 +57,7 @@ export default defineConfig((envObj) => {
                 },
             },
             plugins: [
+                llms(),
                 vueJsx(),
                 UnoCSS(),
                 MermaidPlugin(),
@@ -96,10 +98,10 @@ export default defineConfig((envObj) => {
                 }),
             ],
             optimizeDeps: {
-                include: ['mermaid'],
+                include: ['mermaid','element-plus   '],
             },
             ssr: {
-                noExternal: ['mermaid'],
+                noExternal: ['mermaid','element-plus    '],
             },
             css: {
                 // css预处理器

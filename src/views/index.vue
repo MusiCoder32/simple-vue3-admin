@@ -13,12 +13,10 @@
                             <!-- 可查看doc/重要逻辑说明.md文档第2点 -->
                             <KeepAlive :include="keepAliveInclude">
                                 <component
-                                    :class="isFull ? 'p-f tp0 lf0' : ''"
                                     :componentName="changeComponentName(Component)"
                                     :is="Component"
                                     :key="keepAliveInfo[route.path]"></component>
                             </KeepAlive>
-                            <full-screen v-if="showFullScreenBtn" @fullScreenChange="fullScreenChangeHandle" />
                         </RouterView>
                     </div>
                 </el-scrollbar>
@@ -32,9 +30,6 @@ import { findIndex } from 'lodash'
 import SHeader from './header.vue'
 import Menus from './menus.vue'
 import TagNav from './tag-nav.vue'
-import { BiMenuEnum } from '@/configs/bi-config'
-
-const isFull = ref(false)
 
 const router = useRouter()
 const route = useRoute()
@@ -54,9 +49,7 @@ const keepAliveInclude = computed(() => {
             .join('-')
     })
 })
-const showFullScreenBtn = computed(() => {
-    return Object.values(BiMenuEnum).includes(route.path)
-})
+
 utils.on('loading', () => {
     if (timeout.value) {
         clearTimeout(timeout.value)
@@ -85,9 +78,7 @@ utils.on('hideLoading', (immediate: boolean) => {
         Math.max(1000 - time, 0),
     )
 })
-function fullScreenChangeHandle(val) {
-    isFull.value = val
-}
+
 //通过该方式,修改组件名,该组件名可用于keep-alive中控制组件是否缓存
 function changeComponentName(com) {
     if (com?.type) {

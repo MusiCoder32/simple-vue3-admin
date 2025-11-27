@@ -1,38 +1,40 @@
 <template>
-    <Codemirror v-model:value="code" :options="cmOptions" border ref="cmRef"></Codemirror>
+    <div ref="editorRef" style="height: 400px; border: 1px solid #eee; border-radius: 4px; overflow: hidden"></div>
 </template>
 <script setup>
-import 'codemirror/mode/javascript/javascript.js'
-import Codemirror from 'codemirror-editor-vue3'
-import 'codemirror/theme/ayu-mirage.css'
-import 'codemirror/theme/neo.css'
+import { ref, onMounted, onUnmounted } from 'vue'
 import vueEditStr from './vue-edit-str'
+import { EditorView, basicSetup } from 'codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { oneDark } from '@codemirror/theme-one-dark'
 
 const code = ref('')
-
 const schema = inject('$schema', {})
-
-const cmRef = ref()
-const cmOptions = reactive({
-    mode: 'text/javascript',
-    lineNumbers: true, // Show line number
-    smartIndent: true, // Smart indent
-    indentUnit: 4, // The smart indent unit is 2 spaces in length
-    foldGutter: true, // Code folding
-    matchBrackets: true,
-    autoCloseBrackets: true,
-    styleActiveLine: true, // Display the style of the selected row
-    readOnly: false,
-    // theme:'ayu-mirage',
-    // theme:'neo',
-})
+const editorRef = ref()
+let view = null
 
 onMounted(() => {
     code.value = vueEditStr(JSON.stringify(schema.value, null, 2))
-    cmRef.value.refresh()
+    view = new EditorView({
+        doc: code.value,
+        extensions: [
+            basicSetup,
+            javascript(),
+            oneDark,
+            EditorView.updateListener.of((update) => {
+                if (update.docChanged) {
+                    code.value = view.state.doc.toString()
+                }
+            }),
+        ],
+        parent: editorRef.value,
+    })
 })
 
 onUnmounted(() => {
-    cmRef.value?.destroy()
+    if (view) {
+        view.destroy()
+        view = null
+    }
 })
 </script>

@@ -1,0 +1,4 @@
+.vitepress/cache
+.vitepress/dist
+/typings
+*time

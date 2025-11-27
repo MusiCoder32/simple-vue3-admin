@@ -1,47 +1,45 @@
 <template>
-    <Codemirror style="line-height: 16px" v-model:value="value" :options="cmOptions" border ref="cmRef"></Codemirror>
+    <div ref="editorRef" style="height: 300px; border: 1px solid #eee; border-radius: 4px; overflow: hidden; line-height: 16px"></div>
 </template>
 <script setup lang="ts">
-import { ref, reactive, onMounted, onUnmounted, defineProps, computed } from 'vue'
-import 'codemirror/mode/javascript/javascript.js'
-import Codemirror from 'codemirror-editor-vue3'
+import { ref, onMounted, onUnmounted, defineProps, watch } from 'vue'
+import { EditorView, basicSetup } from 'codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { oneDark } from '@codemirror/theme-one-dark'
 
-const props = defineProps<{
-    modelValue: string
-}>()
-
+const props = defineProps<{ modelValue: string }>()
 const emits = defineEmits(['update:modelValue'])
-
-const value = computed({
-    get() {
-        return props.modelValue
-    },
-    set(val) {
-        emits('update:modelValue', val)
-    },
-})
-
-const cmRef = ref()
-
-const cmOptions = reactive({
-    mode: 'text/javascript',
-    lineNumbers: true, // Show line number
-    smartIndent: true, // Smart indent
-    indentUnit: 4, // The smart indent unit is 2 spaces in length
-    foldGutter: true, // Code folding
-    matchBrackets: true,
-    autoCloseBrackets: true,
-    styleActiveLine: true, // Display the style of the selected row
-    readOnly: false,
-    // theme: 'neo'
-})
+const editorRef = ref<HTMLElement | null>(null)
+let view: EditorView | null = null
 
 onMounted(() => {
-    // code.value = vueEditStr(JSON.stringify(props.schema, null, 2))
-    cmRef.value.refresh()
+    view = new EditorView({
+        doc: props.modelValue,
+        extensions: [
+            basicSetup,
+            javascript(),
+            oneDark,
+            EditorView.updateListener.of((update) => {
+                if (update.docChanged) {
+                    const value = view!.state.doc.toString()
+                    emits('update:modelValue', value)
+                }
+            })
+        ],
+        parent: editorRef.value!
+    })
+})
+
+watch(() => props.modelValue, (newVal) => {
+    if (view && newVal !== view.state.doc.toString()) {
+        view.dispatch({ changes: { from: 0, to: view.state.doc.length, insert: newVal } })
+    }
 })
 
 onUnmounted(() => {
-    cmRef.value?.destroy()
+    if (view) {
+        view.destroy()
+        view = null
+    }
 })
 </script>
