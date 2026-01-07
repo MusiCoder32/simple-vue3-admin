@@ -20,6 +20,8 @@ const path = require('path');
 
 function parseArgs(argv) {
   const args = argv.slice(2);
+  console.log(args)
+
   if (args.length < 2) {
     console.error('Usage: node reconstruct-structure.js <structure_json> <destination_root> [--overwrite] [--skip-symlinks] [--no-root-dir]');
     process.exit(1);

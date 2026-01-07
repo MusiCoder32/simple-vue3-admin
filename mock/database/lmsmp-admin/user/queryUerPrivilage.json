@@ -16,21 +16,7 @@
             { "roleId": "8", "roleName": "普通用户", "roleType": "SYSTEM", "roleCode": null }
         ],
         "menuList": [
-            {
-                "id": "223956359135444992",
-                "pid": null,
-                "route": "/force",
-                "icon": "link",
-                "type": "MENU",
-                "creator": "admin",
-                "createTime": "2024-10-11 10:13:31",
-                "modifier": "admin",
-                "modifyTime": "2025-07-01 10:20:59",
-                "dr": 0,
-                "sortNum": 10,
-                "name": "d3.js力导图",
-                "isChecked": null
-            },
+
 
             {
                 "id": "197858065722114048",

@@ -57,6 +57,7 @@ export default defineConfig((envObj) => {
                     ],
                     'vue-i18n': ['useI18n'],
                     dayjs: [['default', 'dayjs']],
+                    d3: [['*', 'd3']],
                 },
             ],
             dts: 'src/typings/auto-imports.d.ts',

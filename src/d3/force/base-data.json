@@ -1,0 +1,154 @@
+{
+    "name": "当前项目",
+    "children": [
+        {
+            "name": "前置",
+            "children": [
+                {
+                    "name": "前置",
+                    "children": [
+                        {
+                            "name": "前置",
+                            "house": 2
+                        },
+                        {
+                            "name": "并列",
+                            "children": [
+                                {
+                                    "name": "前置"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "后置",
+                            "house": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "并列",
+            "children": [
+                {
+                    "name": "前置",
+                    "children": [
+                        {
+                            "name": "前置",
+                            "children": [
+                                {
+                                    "name": "前置"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "并列",
+                            "house": 2
+                        }
+                    ]
+                },
+                {
+                    "name": "并列",
+                    "children": [
+                        {
+                            "name": "前置",
+                            "children": [
+                                {
+                                    "name": "前置"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "后置",
+            "children": [
+                {
+                    "name": "前置",
+                    "children": [
+                        {
+                            "name": "前置",
+                            "children": [
+                                {
+                                    "name": "前置",
+                                    "children": [
+                                        {
+                                            "name": "前置"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "并列",
+                            "children": [
+                                {
+                                    "name": "前置",
+                                    "children": [
+                                        {
+                                            "name": "前置"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "并列",
+                    "children": [
+                        {
+                            "name": "前置",
+                            "house": 2
+                        },
+                        {
+                            "name": "并列",
+                            "children": [
+                                {
+                                    "name": "前置",
+                                    "children": [
+                                        {
+                                            "name": "前置"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "后置",
+                            "house": 2
+                        }
+                    ]
+                },
+                {
+                    "name": "后置",
+                    "children": [
+                        {
+                            "name": "前置",
+                            "children": [
+                                {
+                                    "name": "前置",
+                                    "children": [
+                                        {
+                                            "name": "前置"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "并列",
+                            "children": [
+                                {
+                                    "name": "前置"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
